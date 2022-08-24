@@ -10,17 +10,12 @@ const HeaderMenu = () => {
   //Tự động add shadow khi scroll down
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      setScrollActive(window.scrollY > 20);
-    });
-  }, []);
+      setScrollActive(window.scrollY > 20);});}, []);
   return (
-   
       <header
         className={
           "fixed top-0 w-full  z-30 bg-white-500 transition-all " +
-          (scrollActive ? " shadow-md pt-0" : " pt-4")
-        }
-      >
+          (scrollActive ? " shadow-md pt-0" : " pt-4")}>
         {/* DAS DESKTOP MENU */}
         <nav className="max-w-screen-xl px-6 sm:px-8 lg:px-16 mx-auto grid grid-flow-col py-3 sm:py-4">
           <div className="col-start-1 col-end-2 flex items-center">
@@ -31,14 +26,11 @@ const HeaderMenu = () => {
               <LinkScroll
                 key={nav.id}
                 className={`py-1.5 px-5 font-dasfont font-semibold cursor-pointer text-[14.5px] hover:rounded-full hover:bg-green-100 ${
-                  active === nav.title ? "text-active-click bg-green-100 rounded-full" : "text-black"
-                } ${index === navLinks.length - 1 ? "mr-0" : "mr-1.5"}`}
-                onClick={() => setActive(nav.title)}
-              >
+                  active === nav.title ? "text-active-click bg-green-100 rounded-full" : "text-black" } ${index === navLinks.length - 1 ? "mr-0" : "mr-1.5"}`}
+                onClick={() => setActive(nav.title)}>
                 <a href={`#${nav.id}`}>{nav.title}</a>
               </LinkScroll>
             ))}
-           
           </ul>
           <ul className="lg:flex text-black-500  items-center col-start-10 col-end-12 font-medium">
           <LinkScroll className="py-1.5 px-5">
@@ -54,16 +46,11 @@ const HeaderMenu = () => {
           <div className="bg-white-500 sm:px-3">
           <ul className="flex w-full justify-between items-center text-black-500">
               {navLinksMobile.map((nav, index) => (
-              <LinkScroll
-                key={nav.id}
-                className={`mx-1 sm:mx-2 px-3 sm:px-4 py-2 flex flex-col items-center text-xs text-center font-medium transition-all ${
+              <LinkScroll key={nav.id} className={`mx-1 sm:mx-2 px-3 sm:px-4 py-2 flex flex-col items-center text-xs text-center font-medium transition-all ${
                   active === nav.title ? "text-active-click" : "text-black"
-                } ${index === navLinksMobile.length - 1 ? "mr-0" : "mr-1.5"}`}
-                onClick={() => setActive(nav.title)}
-              >
+                } ${index === navLinksMobile.length - 1 ? "mr-0" : "mr-1.5"}`} onClick={() => setActive(nav.title)}>
                 <a href={`#${nav.id}`}>{nav.title}</a>
-              </LinkScroll>
-            ))}
+              </LinkScroll>))}
         
           </ul>
           </div>
