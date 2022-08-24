@@ -1,109 +1,75 @@
-import { useState } from "react";
-
-import { close, logo, menu } from "../assets";
-import { navLinks } from "../constants";
-
+import { useState, useEffect } from "react";
+import {  logo } from "../assets";
+import ButtonOutline from "./ButtonOutline";
+import ButtonPrimary from "./ButtonPrimary";
+import { navLinks,navLinksMobile } from "../constants";
+import { Link as LinkScroll } from "react-scroll";
 const HeaderMenu = () => {
+  const [scrollActive, setScrollActive] = useState(false);
   const [active, setActive] = useState("Home");
-  const [toggle, setToggle] = useState(false);
-  const [showSidebar, setShowSidebar] = useState(false);
+  //Tự động add shadow khi scroll down
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScrollActive(window.scrollY > 20);
+    });
+  }, []);
   return (
-    <div className="HeaderMenu">
-      <nav className="w-full flex py-3 justify-between items-center  ">
-        <img src={logo} alt="Logo" className="w-56" />
-
-        <ul className="list-none sm:flex hidden justify-end items-center flex-1">
-          {navLinks.map((nav, index) => (
-            <li
-              key={nav.id}
-              className={`py-1.5 px-5 font-dasfont font-semibold cursor-pointer text-[14.5px] hover:rounded-full hover:bg-green-100 ${
-                active === nav.title
-                  ? "text-active-click bg-green-100 rounded-full"
-                  : "text-black"
-              } ${index === navLinks.length - 1 ? "mr-0" : "mr-1.5"}`}
-              onClick={() => setActive(nav.title)}
-            >
-              <a href={`#${nav.id}`}>{nav.title}</a>
-            </li>
-          ))}
-          <li
-            className={`font-dasfont font-semibold cursor-pointer text-[14.5px]`}
-          >
-            <button
-              type="button"
-              className="ml-5 font-semibold rounded-full button-das-width bg-das-color-outline p-2 px-6"
-            >
-              Đăng ký
-            </button>
-            <button
-              type="button"
-              className="ml-5 font-semibold rounded-full button-das-width bg-das-color p-2 px-6"
-            >
-              Đăng nhập
-            </button>
-          </li>
-        </ul>
-        {/* 
-        <div className="sm:hidden flex flex-1 justify-end items-center">
-          <img
-            src={toggle ? close : menu}
-            alt="menu"
-            className="w-[28px] h-[28px] object-contain"
-            onClick={() => setToggle(!toggle)}
-          />
-
-          <div
-            className={`${
-              !toggle ? "hidden" : "flex"
-            } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
-          >
-            <ul className="list-none flex justify-end items-start flex-1 flex-col">
-              {navLinks.map((nav, index) => (
-                <li
-                  key={nav.id}
-                  className={`font-dasfont font-medium cursor-pointer text-[16px] ${
-                    active === nav.title ? "text-white" : "text-dimWhite"
-                  } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
-                  onClick={() => setActive(nav.title)}
-                >
-                  <a href={`#${nav.id}`}>{nav.title}</a>
-                </li>
-              ))}
-            </ul>
+   
+      <header
+        className={
+          "fixed top-0 w-full  z-30 bg-white-500 transition-all " +
+          (scrollActive ? " shadow-md pt-0" : " pt-4")
+        }
+      >
+        {/* DAS DESKTOP MENU */}
+        <nav className="max-w-screen-xl px-6 sm:px-8 lg:px-16 mx-auto grid grid-flow-col py-3 sm:py-4">
+          <div className="col-start-1 col-end-2 flex items-center">
+              <img src={logo} alt="Logo" className="w-56" />
           </div>
-        </div> */}
+          <ul className="hidden lg:flex justify-end text-black-500 col-start-8 col-end-10  items-center">
+              {navLinks.map((nav, index) => (
+              <LinkScroll
+                key={nav.id}
+                className={`py-1.5 px-5 font-dasfont font-semibold cursor-pointer text-[14.5px] hover:rounded-full hover:bg-green-100 ${
+                  active === nav.title ? "text-active-click bg-green-100 rounded-full" : "text-black"
+                } ${index === navLinks.length - 1 ? "mr-0" : "mr-1.5"}`}
+                onClick={() => setActive(nav.title)}
+              >
+                <a href={`#${nav.id}`}>{nav.title}</a>
+              </LinkScroll>
+            ))}
+           
+          </ul>
+          <ul className="lg:flex text-black-500  items-center col-start-10 col-end-12 font-medium">
+          <LinkScroll className="py-1.5 px-5">
+               <ButtonOutline >Đăng ký</ButtonOutline>
+            </LinkScroll>
+            <LinkScroll className="py-1.5 px-5">
+               <ButtonPrimary>Đăng nhập</ButtonPrimary>
+            </LinkScroll>
+          </ul>
+        </nav>
+        {/* DAS MOBLIE MENU */}
+        <nav className="fixed lg:hidden bottom-0 left-0 right-0 z-20 px-4 sm:px-8 shadow-t shadow-md">
+          <div className="bg-white-500 sm:px-3">
+          <ul className="flex w-full justify-between items-center text-black-500">
+              {navLinksMobile.map((nav, index) => (
+              <LinkScroll
+                key={nav.id}
+                className={`mx-1 sm:mx-2 px-3 sm:px-4 py-2 flex flex-col items-center text-xs text-center font-medium transition-all ${
+                  active === nav.title ? "text-active-click" : "text-black"
+                } ${index === navLinksMobile.length - 1 ? "mr-0" : "mr-1.5"}`}
+                onClick={() => setActive(nav.title)}
+              >
+                <a href={`#${nav.id}`}>{nav.title}</a>
+              </LinkScroll>
+            ))}
         
-      </nav>
-      <>
-  {showSidebar ? (
-    <button
-      className="flex text-4xl text-white items-center cursor-pointer fixed right-10 top-6 z-50"
-      onClick={() => setShowSidebar(!showSidebar)}
-    >
-      x
-    </button>
-  ) : (
-    <svg
-      onClick={() => setShowSidebar(!showSidebar)}
-      className="fixed  z-30 flex items-center cursor-pointer right-10 top-6"
-      fill="#2563EB"
-      viewBox="0 0 100 80"
-      width="40"
-      height="40"
-    >
-      <rect width="100" height="10"></rect>
-      <rect y="30" width="100" height="10"></rect>
-      <rect y="60" width="100" height="10"></rect>
-    </svg>
-  )}
-
-  <div  className={`top-0 right-0 w-[35vw] bg-blue-600  p-10 pl-20 text-white fixed h-full z-40 ${
-    showSidebar ? "translate-x-0 " : "translate-x-full"
-  }`}>
-    <h3 className="mt-20 text-4xl font-semibold text-white">I am a sidebar</h3>
-  </div>
-</>
-    </div>
+          </ul>
+          </div>
+        </nav>
+      </header>
+    
   );
 };
 

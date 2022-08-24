@@ -8,6 +8,8 @@ import Stats from "./Stats";
 import Footer from "./Footer";
 import Testimonials from "./Testimonials";
 import Hero from "./Hero";
+import ButtonOutline from "./ButtonOutline";
+import ButtonPrimary from "./ButtonPrimary";
 
 export {
   HeaderMenu,
@@ -20,4 +22,6 @@ export {
   Footer,
   Testimonials,
   Hero,
+  ButtonOutline,
+  ButtonPrimary
 };

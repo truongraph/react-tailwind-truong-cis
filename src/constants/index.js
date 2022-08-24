@@ -27,6 +27,24 @@ export const navLinks = [
   },
 ];
 
+export const navLinksMobile = [
+  {
+    id: "trangchu",
+    title: "Trang chủ",
+  },
+  {
+    id: "gioithieu",
+    title: "Giới thiệu",
+  },
+  {
+    id: "khachhang",
+    title: "Khách hàng",
+  },
+  {
+    id: "lienhe",
+    title: "Liên hệ",
+  },
+];
 export const features = [
   {
     id: "feature-1",
@@ -102,23 +120,23 @@ export const footerLinks = [
     links: [
       {
         name: "Content",
-        link: "https://www.hoobank.com/content/",
+        link: "https://www.das.com/content/",
       },
       {
         name: "How it Works",
-        link: "https://www.hoobank.com/how-it-works/",
+        link: "https://www.das.com/how-it-works/",
       },
       {
         name: "Create",
-        link: "https://www.hoobank.com/create/",
+        link: "https://www.das.com/create/",
       },
       {
         name: "Explore",
-        link: "https://www.hoobank.com/explore/",
+        link: "https://www.das.com/explore/",
       },
       {
         name: "Terms & Services",
-        link: "https://www.hoobank.com/terms-and-services/",
+        link: "https://www.das.com/terms-and-services/",
       },
     ],
   },
@@ -127,23 +145,23 @@ export const footerLinks = [
     links: [
       {
         name: "Help Center",
-        link: "https://www.hoobank.com/help-center/",
+        link: "https://www.das.com/help-center/",
       },
       {
         name: "Partners",
-        link: "https://www.hoobank.com/partners/",
+        link: "https://www.das.com/partners/",
       },
       {
         name: "Suggestions",
-        link: "https://www.hoobank.com/suggestions/",
+        link: "https://www.das.com/suggestions/",
       },
       {
         name: "Blog",
-        link: "https://www.hoobank.com/blog/",
+        link: "https://www.das.com/blog/",
       },
       {
         name: "Newsletters",
-        link: "https://www.hoobank.com/newsletters/",
+        link: "https://www.das.com/newsletters/",
       },
     ],
   },
@@ -152,11 +170,11 @@ export const footerLinks = [
     links: [
       {
         name: "Our Partner",
-        link: "https://www.hoobank.com/our-partner/",
+        link: "https://www.das.com/our-partner/",
       },
       {
         name: "Become a Partner",
-        link: "https://www.hoobank.com/become-a-partner/",
+        link: "https://www.das.com/become-a-partner/",
       },
     ],
   },
