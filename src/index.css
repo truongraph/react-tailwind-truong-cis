@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.das-logo {
+  width: 178px;
+}
+.text-active-click{
+  color: #16be65;
+}
+
+.bg-das-color {
+  color: #ffffff;
+  background-color: #16be65;
+  padding: .475rem 1.5rem;
+  border: 2px solid;
+}
+.bg-das-color:hover{
+  color: #ffffff;
+  background-color: #10a355;
+}
+.bg-das-color-outline{
+  color: #16be65;
+  background-color: #ffffff;
+  border-color: #16be65;
+  border: 2px solid;
+  padding: .475rem 1.5rem;
+}
+.bg-das-color-outline:hover{
+  color: #16be65;
+  background-color: #d7f8e8;
+ 
+}
