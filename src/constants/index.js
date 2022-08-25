@@ -27,24 +27,6 @@ export const navLinks = [
   },
 ];
 
-export const navLinksMobile = [
-  {
-    id: "trangchu",
-    title: "Trang chủ",
-  },
-  {
-    id: "gioithieu",
-    title: "Giới thiệu",
-  },
-  {
-    id: "khachhang",
-    title: "Khách hàng",
-  },
-  {
-    id: "lienhe",
-    title: "Liên hệ",
-  },
-];
 export const features = [
   {
     id: "feature-1",
