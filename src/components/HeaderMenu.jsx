@@ -4,7 +4,7 @@ import ButtonOutline from "./ButtonOutline";
 import ButtonPrimary from "./ButtonPrimary";
 import { navLinks } from "../constants";
 import { Link as LinkScroll } from "react-scroll";
-import { BanknotesIcon, CubeIcon, EnvelopeIcon, HomeIcon, PuzzlePieceIcon } from "@heroicons/react/24/solid";
+import { BanknotesIcon, CubeIcon, EnvelopeIcon, HomeIcon } from "@heroicons/react/24/solid";
 const HeaderMenu = () => {
   const [scrollActive, setScrollActive] = useState(false);
   const [active, setActive] = useState("Home");
@@ -18,14 +18,14 @@ const HeaderMenu = () => {
   return (
     <header
       className={
-        "fixed top-0 w-full  z-30 bg-white-500 transition-all " +
+        "fixed top-0 w-full  z-30 bg-white-500 transition-all bg-white" +
         (scrollActive ? " shadow-md pt-0" : " pt-0  ")
       }
     >
       {/* ============================================================================ */}
       {/* DAS DESKTOP MENU */}
       {/* ============================================================================ */}
-      <nav className="max-w-screen-xl px-6 sm:px-8 lg:px-16 mx-auto grid grid-flow-col py-3 sm:py-4 bg-white">
+      <nav className="max-w-screen-xl px-6 sm:px-8 lg:px-16 mx-auto grid grid-flow-col py-4 sm:py-6 bg-white">
         <div className="flex items-center">
           <img src={logo} alt="Logo" className="w-56 block m-auto" />
         </div>
@@ -33,7 +33,7 @@ const HeaderMenu = () => {
           {navLinks.map((nav, index) => (
             <LinkScroll
               key={nav.id}
-              className={`py-1.5 px-5 font-dasfont font-semibold cursor-pointer text-[14.5px] hover:rounded-full hover:bg-green-100 ${
+              className={`py-1.5 px-5 font-dasfont font-semibold cursor-pointer text-[14px] hover:rounded-full hover:bg-green-100 ${
                 active === nav.title
                   ? "text-active-click bg-green-100 rounded-full"
                   : "text-black"
@@ -72,11 +72,11 @@ const HeaderMenu = () => {
               className={
                 "mx-1 sm:mx-2 px-3 sm:px-4 py-2 flex flex-col items-center text-xs border-t-2 transition-all " +
                 (activeLink === "trangchu"
-                  ? "  border-green-500 text-green-500"
+                  ? "  border-green-500 text-red-500"
                   : " border-transparent")
               }
             >
-              <HomeIcon className="h-6 w-6 text-green-500" />
+              <HomeIcon className="h-6 w-6 text-red-500" />
               <span className="font-semibold">Trang chủ</span>
             </LinkScroll>
             {/* ============================================================================ */}
@@ -92,11 +92,11 @@ const HeaderMenu = () => {
               className={
                 "mx-1 sm:mx-2 px-3 sm:px-4 py-2 flex flex-col items-center text-xs border-t-2 transition-all " +
                 (activeLink === "gioithieu"
-                  ? "  border-green-500 text-green-500"
+                  ? "  border-green-500 text-red-500"
                   : " border-transparent ")
               }
             >
-              <CubeIcon className="h-6 w-6 text-green-500" />
+              <CubeIcon className="h-6 w-6 text-red-500" />
               <span className="font-semibold ">Giới thiệu</span>
             </LinkScroll>
             {/* ============================================================================ */}
@@ -112,11 +112,11 @@ const HeaderMenu = () => {
               className={
                 "mx-1 sm:mx-2 px-3 sm:px-4 py-2 flex flex-col items-center text-xs border-t-2 transition-all " +
                 (activeLink === "banggia"
-                  ? "  border-green-500 text-green-500"
+                  ? "  border-green-500 text-red-500"
                   : " border-transparent ")
               }
             >
-              <BanknotesIcon className="h-6 w-6 text-green-500" />
+              <BanknotesIcon className="h-6 w-6 text-red-500" />
               <span className="font-semibold">Bảng giá</span>
             </LinkScroll>
             {/* ============================================================================ */}
@@ -132,11 +132,11 @@ const HeaderMenu = () => {
               className={
                 "mx-1 sm:mx-2 px-3 sm:px-4 py-2 flex flex-col items-center text-xs border-t-2 transition-all " +
                 (activeLink === "lienhe"
-                  ? "  border-green-500 text-green-500"
+                  ? "  border-green-500 text-red-500"
                   : " border-transparent ")
               }
             >
-              <EnvelopeIcon className="h-6 w-6 text-green-500" />
+              <EnvelopeIcon className="h-6 w-6 text-red-500" />
               <span className="font-semibold">Liên hệ</span>
             </LinkScroll>
           </ul>

@@ -11,13 +11,18 @@
 .bg-das-color {
   color: #ffffff;
   background-color: #16be65;
-  padding: .475rem 1.5rem;
   font-weight: 600;
-    border-width: 2px;
-    line-height: 1.5;
+  border-width: 2px;
+  line-height: 1.5;
   border-color: #16be65;
   border: 2px solid;
-  line-height: 15px;
+  margin: 0;
+  height: 35px;
+  line-height: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-transform: none;
+  font-size: 14px;
 }
 .bg-das-color:hover{
   color: #ffffff;
@@ -26,13 +31,18 @@
 .bg-das-color-outline{
   color: #16be65;
   background-color: #ffffff;
-  padding: .475rem 1.5rem;
   font-weight: 600;
-    border-width: 2px;
-    line-height: 1.5;
+  border-width: 2px;
+  line-height: 1.5;
   border-color: #16be65;
   border: 2px solid;
-  line-height: 15px;
+  margin: 0;
+  height: 35px;
+  line-height: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-transform: none;
+  font-size: 14px;
 }
 .bg-das-color-outline:hover{
   color: #16be65;
@@ -50,4 +60,16 @@
 }
 .shadow-t {
   box-shadow: 0 -1px 3px 0 rgba(0,0,0,0.1),0 1px 2px 0 rgba(0,0,0,0.06);
+}
+.bg-img{
+  background-image:  url(./assets/banner.png);
+  background-position: 50% 50%;
+}
+.overlay {
+  background-color: rgba(2, 17, 42, 0.785);
+  pointer-events: none;
+
+}
+.max-w-screen-xl{
+  max-width: 1400px;
 }
