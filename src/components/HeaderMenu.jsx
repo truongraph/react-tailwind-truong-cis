@@ -25,7 +25,7 @@ const HeaderMenu = () => {
       {/* ============================================================================ */}
       {/* DAS DESKTOP MENU */}
       {/* ============================================================================ */}
-      <nav className="max-w-screen-xl px-6 sm:px-8 lg:px-16 mx-auto grid grid-flow-col py-4 sm:py-6 bg-white">
+      <nav className="max-w-screen-xl px-6 sm:px-8 lg:px-16 mx-auto grid grid-flow-col py-2 sm:py-4 bg-white">
         <div className="flex items-center">
           <img src={logo} alt="Logo" className="w-56 block m-auto" />
         </div>
@@ -57,9 +57,9 @@ const HeaderMenu = () => {
       {/* ============================================================================ */}
       {/* DAS MOBLIE MENU */}
       {/* ============================================================================ */}
-      <nav className="fixed lg:hidden bottom-0 left-0 right-0 z-20 px-4 sm:px-8 shadow-t bg-white">
+      <nav className="fixed lg:hidden bottom-0 left-0 right-0 z-20 px-3 sm:px-8 shadow-t bg-green-500">
         <div className="bg-white-500 sm:px-3">
-          <ul className="flex w-full justify-between items-center text-black-500 font-dasfont ">
+          <ul className="flex w-full justify-between items-center text-black-500 font-dasfont text-white">
             <LinkScroll
               activeClass="active"
               to="trangchu"
@@ -70,14 +70,14 @@ const HeaderMenu = () => {
                 setActiveLink("trangchu");
               }}
               className={
-                "mx-1 sm:mx-2 px-3 sm:px-4 py-2 flex flex-col items-center text-xs border-t-2 transition-all " +
+                "mx-1 sm:mx-2 px-1 sm:px-1 py-2 flex flex-col items-center text-xs border-t-2 transition-all " +
                 (activeLink === "trangchu"
-                  ? "  border-green-500 text-red-500"
+                  ? "  border-green-500 text-white"
                   : " border-transparent")
               }
             >
-              <HomeIcon className="h-6 w-6 text-red-500" />
-              <span className="font-semibold">Trang chủ</span>
+              <HomeIcon className="h-6 w-6 text-white" />
+              <span className="font-normal">Trang chủ</span>
             </LinkScroll>
             {/* ============================================================================ */}
             <LinkScroll
@@ -90,14 +90,14 @@ const HeaderMenu = () => {
                 setActiveLink("gioithieu");
               }}
               className={
-                "mx-1 sm:mx-2 px-3 sm:px-4 py-2 flex flex-col items-center text-xs border-t-2 transition-all " +
+                "mx-1 sm:mx-2 px-1 sm:px-1 py-2 flex flex-col items-center text-xs border-t-2 transition-all " +
                 (activeLink === "gioithieu"
-                  ? "  border-green-500 text-red-500"
+                  ? "  border-green-500 text-white"
                   : " border-transparent ")
               }
             >
-              <CubeIcon className="h-6 w-6 text-red-500" />
-              <span className="font-semibold ">Giới thiệu</span>
+              <CubeIcon className="h-6 w-6 text-white" />
+              <span className="font-normal ">Giới thiệu</span>
             </LinkScroll>
             {/* ============================================================================ */}
             <LinkScroll
@@ -110,14 +110,14 @@ const HeaderMenu = () => {
                 setActiveLink("banggia");
               }}
               className={
-                "mx-1 sm:mx-2 px-3 sm:px-4 py-2 flex flex-col items-center text-xs border-t-2 transition-all " +
+                "mx-1 sm:mx-2 px-1 sm:px-1 py-2 flex flex-col items-center text-xs border-t-2 transition-all " +
                 (activeLink === "banggia"
-                  ? "  border-green-500 text-red-500"
+                  ? "  border-green-500 text-white"
                   : " border-transparent ")
               }
             >
-              <BanknotesIcon className="h-6 w-6 text-red-500" />
-              <span className="font-semibold">Bảng giá</span>
+              <BanknotesIcon className="h-6 w-6 text-white" />
+              <span className="font-normal">Bảng giá</span>
             </LinkScroll>
             {/* ============================================================================ */}
             <LinkScroll
@@ -130,14 +130,14 @@ const HeaderMenu = () => {
                 setActiveLink("lienhe");
               }}
               className={
-                "mx-1 sm:mx-2 px-3 sm:px-4 py-2 flex flex-col items-center text-xs border-t-2 transition-all " +
+                "mx-1 sm:mx-2 px-1 sm:px-1 py-2 flex flex-col items-center text-xs border-t-2 transition-all " +
                 (activeLink === "lienhe"
-                  ? "  border-green-500 text-red-500"
+                  ? "  border-green-500 text-white"
                   : " border-transparent ")
               }
             >
-              <EnvelopeIcon className="h-6 w-6 text-red-500" />
-              <span className="font-semibold">Liên hệ</span>
+              <EnvelopeIcon className="h-6 w-6 text-white" />
+              <span className="font-normal">Liên hệ</span>
             </LinkScroll>
           </ul>
         </div>

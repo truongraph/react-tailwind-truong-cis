@@ -7,7 +7,7 @@ import CTA from "./CTA";
 import Stats from "./Stats";
 import Footer from "./Footer";
 import Testimonials from "./Testimonials";
-import Hero from "./Hero";
+import Home from "./Home";
 import ButtonOutline from "./ButtonOutline";
 import ButtonPrimary from "./ButtonPrimary";
 
@@ -21,7 +21,7 @@ export {
   Stats,
   Footer,
   Testimonials,
-  Hero,
+  Home,
   ButtonOutline,
   ButtonPrimary
 };
