@@ -1,11 +1,13 @@
 import styles from "./style";
-import { Billing, Business, CardDeal, Clients, CTA, Footer, HeaderMenu, Stats, Testimonials, Home } from "./components";
+import { UseMousePosition,Cursor, ModalLogin, CardDeal, Clients, CTA, Footer, HeaderMenu, Introduce, Testimonials, Home,BackTopButton } from "./components";
 
 const App = () => (
-  <section>
+  <section >
+    <Cursor />
     <HeaderMenu />
     <Home />
-    <Stats />
+    <Introduce />
+    <BackTopButton />
   </section>
 );
 

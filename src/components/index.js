@@ -1,27 +1,28 @@
 import HeaderMenu from "./HeaderMenu";
-import Billing from "./Billing";
+import UseMousePosition from "./UseMousePosition";
 import CardDeal from "./CardDeal";
-import Business from "./Business";
+import ModalLogin from "./ModalLogin";
 import Clients from "./Clients";
 import CTA from "./CTA";
-import Stats from "./Stats";
+import Introduce from "./Introduce";
 import Footer from "./Footer";
 import Testimonials from "./Testimonials";
 import Home from "./Home";
 import ButtonOutline from "./ButtonOutline";
-import ButtonPrimary from "./ButtonPrimary";
-
+import BackTopButton from "./BackTopButton";
+import Cursor from "./Cursor";
 export {
   HeaderMenu,
-  Billing,
+  UseMousePosition,
   CardDeal,
-  Business,
+  ModalLogin,
   Clients,
   CTA,
-  Stats,
+  Introduce,
   Footer,
   Testimonials,
   Home,
   ButtonOutline,
-  ButtonPrimary
+  BackTopButton,
+  Cursor
 };

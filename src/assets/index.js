@@ -5,7 +5,8 @@ import Illustration1 from "./Illustration1.png";
 import Illustration2 from "./Illustration2.png";
 import easy from "./easy.png";
 import business  from "./business.png";
-import database from "./database.png"
+import database from "./database.png";
+import bannersvg from "./banner.svg";
 export {
   logo,
   banner,
@@ -13,5 +14,6 @@ export {
   Illustration2,
   easy,
   business,
-  database
+  database,
+  bannersvg
 };

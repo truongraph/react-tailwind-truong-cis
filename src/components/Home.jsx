@@ -3,10 +3,18 @@ import {
   ArrowLongDownIcon,
 } from "@Heroicons/react/24/outline";
 const Home = () => {
+  const scrollDown = () => {
+    window.scrollTo({
+      top: 700,
+      behavior: "smooth", 
+      duration: 10000,
+      s: 1
+    });
+  };
   return (
-    <section className="relative mt-[65px]" id="trangchu">
+    <section className="relative mt-[65px]  pt-0 xl:pt-10" id="trangchu">
       <div className="max-w-screen-xl px-5 xl:px-16 mx-auto font-dasfont">
-        <div className="grid grid-flow-row sm:grid-flow-col grid-rows-2 md:grid-rows-1 sm:grid-cols-2 gap-8 py-6 sm:py-16 ">
+        <div className="grid grid-flow-row sm:grid-flow-col grid-rows-2 md:grid-rows-1 sm:grid-cols-2 gap-8 pt-6 pb-3 sm:py-16 ">
           <div className=" flex flex-col justify-center items-start row-start-2 sm:row-start-1">
             <p className="text-2xl lg:text-3xl xl:text-4xl font-medium text-black-600 leading-normal">
               Phần mềm quản lý phòng khám <br />
@@ -26,11 +34,13 @@ const Home = () => {
           </div>
           <div className="flex w-full">
             <div className="h-full w-full">
-              <img src="src/assets/Illustration1.png" />
+              <img src="src/assets/banner.svg" />
             </div>
           </div>
         </div>
-        <ArrowLongDownIcon class="transition-all duration-1000 delay-1000 animate-bounce w-10 h-10 mt-3 text-green-500 mt-3 mb-10" />
+        {/* <ArrowLongDownIcon onClick={scrollDown} class="transition-all duration-1000 delay-1000 animate-bounce w-10 h-10 text-green-500 mt-3 mb-10 cursor-pointer" /> */}
+        <div onClick={scrollDown} class="scrolldown"></div>
+        
       </div>
     </section>
   );
