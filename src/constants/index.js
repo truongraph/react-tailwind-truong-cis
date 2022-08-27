@@ -68,7 +68,7 @@ export const footerLinks = [
         link: "https://www.das.com/explore/",
       },
       {
-        name: "Terms & Services",
+        name: "Terms &amp; Services",
         link: "https://www.das.com/terms-and-services/",
       },
     ],

@@ -83,7 +83,7 @@ const MoblieSection = ({
           Tải ứng dụng ngay
         </h5>
         <p className="mb-5 text-[14px] text-white dark:text-gray-400">
-          Trải nghiệm ứng dụng DA CLOUD trên Google Play & App Store
+          Trải nghiệm ứng dụng DA CLOUD trên Google Play &amp; App Store
         </p>
         <div className="justify-center items-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
           <a className="w-full sm:w-auto bg-white border hover:bg-green-100 focus:outline-none text-green-500 border-current rounded-full inline-flex items-center justify-center px-8 py-2.5 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">

@@ -8,7 +8,7 @@ const PricingHigh = () => {
         <h5 className="mb-4 text-[17px] uppercase font-semibold text-red-500 dark:text-gray-400">
           Gói cao cấp
         </h5>
-        <p className="mt-2 mb-2 text-[14px]">Dành cho những mô hình kinh doanh có nhiều nhân viên & dịch vụ.</p>
+        <p className="mt-2 mb-2 text-[14px]">Dành cho những mô hình kinh doanh có nhiều nhân viên &amp; dịch vụ.</p>
         <div className="flex items-baseline ">
           <span className="text-[30px] font-bold tracking-tight text-red-500">
             10.500.000

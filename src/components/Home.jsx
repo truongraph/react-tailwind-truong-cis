@@ -23,7 +23,7 @@ const Home = () => {
             </p>
             <p className="text-black-500 mt-4 mb-6">
               Giải pháp quản lý phòng khám 4.0 .Giúp các chủ phòng khám dễ dàng
-              cập nhật thông tin đơn giản, nhanh chóng & hiệu quả
+              cập nhật thông tin đơn giản, nhanh chóng &amp; hiệu quả
             </p>
             <button
               className={
