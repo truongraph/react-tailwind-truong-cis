@@ -13,7 +13,7 @@ import Testimonials from "./Testimonials";
 import Home from "./Home";
 import ModalRegister from "./ModalRegister";
 import BackTopButton from "./BackTopButton";
-import Cursor from "./UseMouseCursor";
+import UseMouseCursor from "./UseMouseCursor";
 import GetStarted from "./GetStarted";
 import BottomMenuMoblie from "./BottomMenuMoblie";
 export {
@@ -32,7 +32,7 @@ export {
   Home,
   ModalRegister,
   BackTopButton,
-  Cursor,
+  UseMouseCursor,
   GetStarted,
   BottomMenuMoblie
 };

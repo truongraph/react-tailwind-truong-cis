@@ -1,7 +1,7 @@
 import React from "react";
 
 import useMousePosition from "./useMousePosition";
-const Cursor = () => {
+const UseMouseCursor = () => {
 const { x, y } = useMousePosition();
   return (
     <>
@@ -16,4 +16,4 @@ const { x, y } = useMousePosition();
     </>
   );
 };
-export default Cursor;
+export default UseMouseCursor;
