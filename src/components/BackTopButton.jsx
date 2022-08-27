@@ -1,3 +1,4 @@
+import { ChevronUpIcon } from "@heroicons/react/24/outline";
 import { ArrowUpCircleIcon } from "@heroicons/react/24/solid";
 import React from "react";
 import { useEffect, useState } from "react";
@@ -21,7 +22,7 @@ const Button = ({ styles }) => {
   return (
     <>
       {showButton && (
-        <ArrowUpCircleIcon onClick={scrollToTop} className="back-to-top"/>
+        <ChevronUpIcon onClick={scrollToTop} className="back-to-top"/>
       )}
     </>
   );

@@ -3,7 +3,7 @@ const styles = {
 
   heading2: "font-inter font-semibold xs:text-[48px] text-[40px] text-white xs:leading-[76.8px] leading-[66.8px] w-full",
   paragraph: "font-inter font-normal text-dimWhite text-[18px] leading-[30.8px]",
-
+  loginbutton: "font-semibold rounded-full button-das-width bg-das-color",
   flexCenter: "flex justify-center items-center",
   flexStart: "flex justify-center items-start",
   bgWhite: "bg-white",

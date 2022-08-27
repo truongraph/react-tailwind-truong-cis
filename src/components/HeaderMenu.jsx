@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { logo } from "../assets";
-import ButtonOutline from "./ButtonOutline";
+import ModalRegister from "./ModalRegister";
 import ModalLogin from "./ModalLogin";
-import { navLinks } from "../constants";
 import { Link as LinkScroll } from "react-scroll";
+import styles from "../style";
 import {
   BanknotesIcon,
   CubeIcon,
@@ -159,7 +159,7 @@ const HeaderMenu = () => {
             Liên hệ
           </LinkScroll>
           <LinkScroll className="py-1.5 pl-7 pr-2">
-            <ButtonOutline>Đăng ký</ButtonOutline>
+            <ModalRegister>Đăng ký</ModalRegister>
           </LinkScroll>
           <LinkScroll className="py-1.5 px-0">
             <ModalLogin />
