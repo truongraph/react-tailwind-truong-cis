@@ -1,11 +1,6 @@
 import { stats } from "../constants";
 import styles from "../style";
 import { wellcomesvg ,medicalsvg,stocksvg,filesvg,charsvg,dashboardsvg} from "../assets";
-// import {
-//   ArrowDownCircleIcon,
-//   ArrowLongDownIcon,
-// } from "@Heroicons/react/24/outline";
-// import { CheckCircleIcon } from "@heroicons/react/24/solid";
 const Stats = ({
   listUser = [
     {
@@ -53,24 +48,24 @@ const Stats = ({
   ],
 }) => {
   return (
-    <section className="relative mt-10 pt-10 mb-0 font-dasfont bg-gray-50" id="tinhnang">
+    <section className="relative mt-10 pt-[100px] mb-0 font-dasfont bg-gray-50" id="tinhnang">
       <div className="max-w-screen-xl px-5 xl:px-16 mx-auto font-dasfont">
         <p className="text-2xl lg:text-2xl xl:text-3xl font-extrabold text-green-600 text-black-500 leading-normal">
           Tính năng
         </p>
         <p className="text-[15px] mt-3 text-gray-500">Giải pháp chuyên biệt cho phòng khám</p>
         <div className="relative w-full flex font-dasfont">
-          <div className="rounded-lg w-full bg-white-500 z-10 grid grid-flow-row lg:grid-flow-row grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-12 py-8 lg:py-12 font-dasfont">
+          <div className="rounded-lg w-full bg-white-500 z-10 grid grid-flow-row lg:grid-flow-row grid-cols-1 sm:grid-cols-3 gap-5 lg:gap-16 py-8 lg:py-12 font-dasfont">
             {listUser.map((listUsers, index) => (
-              <div className="max-w-sm bg-white rounded-xl border border-gray-200">
+              <div className="max-w-full bg-white rounded-xl border border-gray-200">
               <a href="#">
-                  <img className="rounded-t-xl p-3 bg-green-50 h-60 w-full block m-auto" src={listUsers.icon}  alt="" />
+                  <img className="rounded-t-xl p-3 bg-green-100 h-60 w-full block m-auto" src={listUsers.icon}  alt="" />
               </a>
               <div className="p-5">
                   <a href="#">
                       <h5 className="mb-2 text-[18px] font-bold tracking-tight text-gray-800 dark:text-white">{listUsers.title}</h5>
                   </a>
-                  <ul className="mt-3 max-w-md list-disc list-inside text-green-600 font-medium leading-5 text-[14.5px] dark:text-gray-400">
+                  <ul className="mt-3 max-w-md list-disc list-inside text-gray-600 font-medium leading-5 text-[15px] dark:text-gray-400">
                     <li className="mb-4">
                       {listUsers.text1}
                     </li>

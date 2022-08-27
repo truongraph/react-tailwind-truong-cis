@@ -1,8 +1,11 @@
 import HeaderMenu from "./HeaderMenu";
 import UseMousePosition from "./UseMousePosition";
-import CardDeal from "./CardDeal";
+import PricingMain from "./PricingMain";
+import PricingBasic from "./PricingBasic";
+import PricingProfessional from "./PricingProfessional";
+import PricingHigh from "./PricingHigh";
 import ModalLogin from "./ModalLogin";
-import Clients from "./Clients";
+import MoblieSection from "./MoblieSection";
 import Feature from "./Feature";
 import Introduce from "./Introduce";
 import Footer from "./Footer";
@@ -10,13 +13,18 @@ import Testimonials from "./Testimonials";
 import Home from "./Home";
 import ModalRegister from "./ModalRegister";
 import BackTopButton from "./BackTopButton";
-import Cursor from "./Cursor";
+import Cursor from "./UseMouseCursor";
+import GetStarted from "./GetStarted";
+import BottomMenuMoblie from "./BottomMenuMoblie";
 export {
   HeaderMenu,
   UseMousePosition,
-  CardDeal,
+  PricingMain,
+  PricingBasic,
+  PricingProfessional,
+  PricingHigh,
   ModalLogin,
-  Clients,
+  MoblieSection,
   Feature,
   Introduce,
   Footer,
@@ -24,5 +32,7 @@ export {
   Home,
   ModalRegister,
   BackTopButton,
-  Cursor
+  Cursor,
+  GetStarted,
+  BottomMenuMoblie
 };

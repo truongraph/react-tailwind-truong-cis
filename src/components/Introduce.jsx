@@ -1,11 +1,4 @@
-import { stats } from "../constants";
-import styles from "../style";
-import { easy, business, database,infosvg } from "../assets";
-// import {
-//   ArrowDownCircleIcon,
-//   ArrowLongDownIcon,
-// } from "@Heroicons/react/24/outline";
-// import { CheckCircleIcon } from "@heroicons/react/24/solid";
+import { easy, business, database, infosvg } from "../assets";
 const Stats = ({
   listUser = [
     {
@@ -26,12 +19,17 @@ const Stats = ({
   ],
 }) => {
   return (
-    <section className="relative mt-10 mb-0 font-dasfont"  id="gioithieu">
+    <section
+      className="relative pt-[100px] mt-10 mb-0 font-dasfont"
+      id="gioithieu"
+    >
       <div className="max-w-screen-xl px-5 xl:px-16 mx-auto font-dasfont">
-      <p className="text-2xl lg:text-2xl xl:text-3xl font-extrabold text-green-600 text-black-500 leading-normal">
+        <p className="text-2xl lg:text-2xl xl:text-3xl font-extrabold text-green-600 text-black-500 leading-normal">
           Giới thiệu
         </p>
-        <p className="text-[15px] mt-3 text-gray-500">Lợi ích khi sử dụng phần mềm DA CLOUD</p>
+        <p className="text-[15px] mt-3 text-gray-500">
+          Lợi ích khi sử dụng phần mềm DA CLOUD
+        </p>
         <div className="relative w-full flex">
           <div className="rounded-lg w-full bg-white-500 z-10 grid grid-flow-row sm:grid-flow-col grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-12 py-8 lg:py-12">
             {listUser.map((listUsers, index) => (
@@ -69,50 +67,130 @@ const Stats = ({
         <div className="grid grid-flow-row sm:grid-flow-col grid-cols-1 sm:grid-cols-2 gap-8 py-8 mt-10">
           <div className="flex w-full justify-end">
             <div className="h-full w-full p-4">
-              
-              <img layout="responsive"
+              <img
+                layout="responsive"
                 quality={100}
                 height={414}
-                width={508} src={infosvg} />
+                width={508}
+                src={infosvg}
+              />
             </div>
           </div>
           <div className="flex flex-col justify-center ml-auto w-full lg:w-12/12">
             <h3 className="text-2xl lg:text-2xl xl:text-3xl font-extrabold text-green-600 text-black-500 leading-normal">
-            Da Cloud là gì ?
+              Da Cloud là gì ?
             </h3>
             <p className="mt-4 text-black-100 text-[15px]">
-             Giải pháp công nghệ 4.0 giúp quản lý hoạt động phòng khám toàn diện, hiệu quả, tiết kiệm chi phí, góp phần nâng cao chất lượng khám chữa bệnh và hỗ trợ nhiều tiện ích chăm sóc sức khỏe cho người dân.
+              Giải pháp công nghệ 4.0 giúp quản lý hoạt động phòng khám toàn
+              diện, hiệu quả, tiết kiệm chi phí, góp phần nâng cao chất lượng
+              khám chữa bệnh và hỗ trợ nhiều tiện ích chăm sóc sức khỏe cho
+              người dân.
             </p>
             <ul className="text-black-500 self-start list-inside text-[14px]">
               <li className="relative circle-check custom-list mt-5 flex">
-               {/* <CheckCircleIcon className="h-6 w-6 text-green-500 inline-block mr-3 min-w-[25px]"/>  */}
-               <svg className="h-6 w-6 text-green-500 inline-block mr-3 min-w-[25px]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                <svg
+                  className="h-6 w-6 text-green-500 inline-block mr-3 min-w-[25px]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
                 Tiết kiệm chi phí triển khai và vận hành hệ thống
               </li>
               <li className="relative circle-check custom-list my-5 flex">
-               {/* <CheckCircleIcon className="h-6 w-6 text-green-500 inline-block mr-3 min-w-[25px]"/>  */} 
-               <svg className="h-6 w-6 text-green-500 inline-block mr-3 min-w-[25px]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-               Cắt giảm chi phí nhân sự và quản lý
+                <svg
+                  className="h-6 w-6 text-green-500 inline-block mr-3 min-w-[25px]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                Cắt giảm chi phí nhân sự và quản lý
               </li>
               <li className="relative circle-check custom-list my-5 flex">
-               {/* <CheckCircleIcon className="h-6 w-6 text-green-500 inline-block mr-3 min-w-[25px]"/>  */} 
-               <svg className="h-6 w-6 text-green-500 inline-block mr-3 min-w-[25px]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-               Đơn giản hóa thủ tục hành chính, giảm thiểu chi phí hồ sơ giấy tờ
+                <svg
+                  className="h-6 w-6 text-green-500 inline-block mr-3 min-w-[25px]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                Đơn giản hóa thủ tục hành chính, giảm thiểu chi phí hồ sơ giấy
+                tờ
               </li>
               <li className="relative circle-check custom-list my-5 flex">
-               {/* <CheckCircleIcon className="h-6 w-6 text-green-500 inline-block mr-3 min-w-[25px]"/>  */} 
-               <svg className="h-6 w-6 text-green-500 inline-block mr-3 min-w-[25px]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-               Quản lý hệ thống phòng khám trên các thiết bị kết nối Internet mọi lúc mọi nơi
+                <svg
+                  className="h-6 w-6 text-green-500 inline-block mr-3 min-w-[25px]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                Quản lý hệ thống phòng khám trên các thiết bị kết nối Internet
+                mọi lúc mọi nơi
               </li>
               <li className="relative circle-check custom-list my-5 flex">
-               {/* <CheckCircleIcon className="h-6 w-6 text-green-500 inline-block mr-3 min-w-[25px]"/>  */} 
-               <svg className="h-6 w-6 text-green-500 inline-block mr-3 min-w-[25px]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-               Hạn chế tối đa sai sót trong kiểm kê và quản lý kho thuốc
+                <svg
+                  className="h-6 w-6 text-green-500 inline-block mr-3 min-w-[25px]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                Hạn chế tối đa sai sót trong kiểm kê và quản lý kho thuốc
               </li>
               <li className="relative circle-check custom-list my-5 flex">
-               {/* <CheckCircleIcon className="h-6 w-6 text-green-500 inline-block mr-3 min-w-[25px]"/>  */} 
-               <svg className="h-6 w-6 text-green-500 inline-block mr-3 min-w-[25px]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-               Hỗ trợ hoạch địch chiến lược phòng khám thông qua hệ thống báo cáo chính xác, khoa học
+                <svg
+                  className="h-6 w-6 text-green-500 inline-block mr-3 min-w-[25px]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                Hỗ trợ hoạch địch chiến lược phòng khám thông qua hệ thống báo
+                cáo chính xác, khoa học
               </li>
             </ul>
           </div>

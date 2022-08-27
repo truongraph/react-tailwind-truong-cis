@@ -13,7 +13,7 @@ const Home = () => {
     });
   };
   return (
-    <section className="relative mt-[65px]  pt-0 xl:pt-10" id="trangchu">
+    <section className="relative pt-[100px]" id="trangchu">
       <div className="max-w-screen-xl px-5 xl:px-16 mx-auto font-dasfont">
         <div className="grid grid-flow-row sm:grid-flow-col grid-rows-2 md:grid-rows-1 sm:grid-cols-2 gap-8 pt-6 pb-3 sm:py-16 ">
           <div className=" flex flex-col justify-center items-start row-start-2 sm:row-start-1">
@@ -39,10 +39,10 @@ const Home = () => {
             </div>
           </div>
         </div>
-        {/* <ArrowLongDownIcon onClick={scrollDown} class="transition-all duration-1000 delay-1000 animate-bounce w-10 h-10 text-green-500 mt-3 mb-10 cursor-pointer" /> */}
-        <div onClick={scrollDown} class="scrolldown"></div>
+        <div onClick={scrollDown} className="scrolldown"></div>
         
       </div>
+      
     </section>
   );
 };

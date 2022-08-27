@@ -1,4 +1,3 @@
-// import { ArrowRightIcon, ExclamationTriangleIcon, XMarkIcon } from "@heroicons/react/24/solid";
 import React from "react";
 
 export default function Modal() {
@@ -29,10 +28,6 @@ export default function Modal() {
                   <h3 className="text-[20px] font-semibold items-center">
                     Đăng nhập tài khoản DA CLOUD
                   </h3>
-                  {/* <XMarkIcon
-                    className="w-[30px] h-[30px] text-black-500"
-                    onClick={() => setShowModal(false)}
-                  /> */}
                   <svg
                     className="w-[30px] h-[30px] text-black-500"
                     onClick={() => setShowModal(false)}
@@ -54,66 +49,73 @@ export default function Modal() {
                 {/* ========================================================== */}
                 <div className="relative p-6 flex-auto">
                   <div className="grid grid-cols-6 gap-4">
-                    <div class="relative z-0 mb-5 w-full group col-span-4">
+                    <div className="relative z-0 mb-5 w-full group col-span-4">
                       <input
                         type="text"
                         name="floating_sdt"
                         id="floating_sdt"
                         autoComplete="off"
-                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-green-500 focus:outline-none focus:ring-0 focus:border-green-500 peer"
+                        className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-green-500 focus:outline-none focus:ring-0 focus:border-green-500 peer"
                         placeholder=" "
                       />
                       <label
                         for="floating_sdt"
-                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-500 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-green-500 peer-focus:dark:text-green-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                        className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-500 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-green-500 peer-focus:dark:text-green-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
                       >
                         Địa chỉ truy cập phòng khám
                       </label>
                     </div>
-                    <div class="relative z-0 mb-5 w-full group col-span-2">
+                    <div className="relative z-0 mb-5 w-full group col-span-2">
                       <button
                         type="button"
-                        class="block text-[8px] h-full w-full font-semibold text-center text-green-600 bg-green-100 rounded-full  focus:outline-none "
+                        className="block text-[8px] h-full w-full font-semibold text-center text-green-600 bg-green-100 rounded-full  focus:outline-none "
                       >
                         .dacloud.vn
                       </button>
                     </div>
                   </div>
+                  {/* ========================================================== */}
                   {showError ? (
                     <div className="text-white px-3 py-2 border-0 rounded relative mb-4 bg-red-100">
                       <span className="text-[13px] inline-block mr-5 align-middle text-red-500">
-                        {/* <ExclamationTriangleIcon  className="h-4 w-4"/> */}
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+                        <svg
+                          className="w-5 h-5"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+                          />
+                        </svg>
                       </span>
                       <span className="inline-block align-middle mr-8 text-[13px] text-black font-medium">
                         Vui lòng nhập địa chỉ truy cập
                       </span>
                     </div>
                   ) : null}
+                  {/* ========================================================== */}
                   <span className="text-[14px]">
                     Bạn chưa có thông tin tài khoản trên DaCloud.?
                     <span className="text-green-600 mx-1 font-medium">
                       Dùng thử miễn phí
                     </span>
                   </span>
+                  {/* ========================================================== */}
                 </div>
                 {/* ========================================================== */}
                 {/*footer*/}
                 <div className="flex items-center justify-end p-3 rounded-b">
-                  {/* <button
-                    className="text-red-500 background-transparent font-semibold px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                    type="button"
-                    onClick={() => setShowModal(false)}
-                  >
-                    Đóng
-                  </button> */}
                   <button
                     className="bg-green-500 flex opacity-100 text-white active:bg-green-600 font-semibold text-sm px-6 py-3 rounded-full outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={() => setshowError(true)}
                   >
                     Đăng nhập quản trị
-                    {/* <ArrowRightIcon className="w-[20px] h-[20px] ml-2"></ArrowRightIcon> */}
                   </button>
                 </div>
               </div>

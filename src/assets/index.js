@@ -12,6 +12,12 @@ import stocksvg from "./stock.svg";
 import dashboardsvg from "./dashboard.svg";
 import charsvg from "./char.svg";
 import filesvg from "./file.svg";
+import mobliesvg from "./moblie.svg";
+import patient from "./patient.png";
+import pie from "./pie-chart.png";
+import calendar from "./calendar.png";
+import report from "./report.png";
+import logowhite from "./logowhite.png";
 export {
   logo,
   banner,
@@ -25,5 +31,11 @@ export {
   stocksvg,
   dashboardsvg,
   charsvg,
-  filesvg
+  filesvg,
+  mobliesvg,
+  patient,
+  pie,
+  calendar,
+  report,
+  logowhite
 };
