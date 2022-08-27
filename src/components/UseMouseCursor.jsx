@@ -1,8 +1,8 @@
 import React from "react";
 
-import useMousePosition from "./useMousePosition";
+import UseMousePosition from "./useMousePosition";
 const UseMouseCursor = () => {
-const { x, y } = useMousePosition();
+const { x, y } = UseMousePosition();
   return (
     <>
       <div
