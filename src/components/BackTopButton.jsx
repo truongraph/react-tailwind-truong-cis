@@ -1,4 +1,5 @@
-import { ArrowUpCircleIcon } from "@heroicons/react/24/solid";
+// import { ChevronUpIcon } from "@heroicons/react/24/outline";
+// import { ArrowUpCircleIcon } from "@heroicons/react/24/solid";
 import React from "react";
 import { useEffect, useState } from "react";
 const Button = ({ styles }) => {
@@ -21,7 +22,8 @@ const Button = ({ styles }) => {
   return (
     <>
       {showButton && (
-        <ArrowUpCircleIcon onClick={scrollToTop} className="back-to-top"/>
+        // <ChevronUpIcon onClick={scrollToTop} className="back-to-top"/>
+        <svg className="back-to-top" onClick={scrollToTop} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 15l7-7 7 7" /></svg>
       )}
     </>
   );

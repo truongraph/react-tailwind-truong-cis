@@ -1,7 +1,8 @@
 
-import {
-  ArrowLongDownIcon,
-} from "@Heroicons/react/24/outline";
+// import {
+//   ArrowLongDownIcon,
+// } from "@Heroicons/react/24/outline";
+import { bannersvg } from "../assets";
 const Home = () => {
   const scrollDown = () => {
     window.scrollTo({
@@ -34,7 +35,7 @@ const Home = () => {
           </div>
           <div className="flex w-full">
             <div className="h-full w-full">
-              <img src="src/assets/banner.svg" />
+              <img src={bannersvg} />
             </div>
           </div>
         </div>

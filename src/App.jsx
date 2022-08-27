@@ -1,5 +1,5 @@
 import styles from "./style";
-import { UseMousePosition,Cursor, ModalLogin, CardDeal, Clients, CTA, Footer, HeaderMenu, Introduce, Testimonials, Home,BackTopButton } from "./components";
+import { Cursor, Feature, HeaderMenu, Introduce, Home,BackTopButton } from "./components";
 
 const App = () => (
   <section >
@@ -7,6 +7,7 @@ const App = () => (
     <HeaderMenu />
     <Home />
     <Introduce />
+    <Feature/>
     <BackTopButton />
   </section>
 );

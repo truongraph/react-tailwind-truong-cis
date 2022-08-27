@@ -1,47 +1,103 @@
-import { ArrowRightIcon, XMarkIcon } from "@heroicons/react/24/solid";
+// import { ArrowRightIcon, ExclamationTriangleIcon, XMarkIcon } from "@heroicons/react/24/solid";
 import React from "react";
 
 export default function Modal() {
   const [showModal, setShowModal] = React.useState(false);
+  const [showError, setshowError] = React.useState(false);
   return (
     <>
       <button
-        className="font-semibold rounded-full button-das-width bg-das-color"
+        className="font-semibold rounded-full bg-green-500 text-white hover:bg-green-600 text-[14px] px-8 border-2 py-1 border-current"
         type="button"
-        onClick={() => setShowModal(true)}
+        onClick={function (event) {
+          setShowModal(true);
+          setshowError(false);
+        }}
       >
         Đăng nhập
       </button>
       {showModal ? (
         <>
           <div className="font-dasfont justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
-            <div className="relative w-auto my-6 mx-auto max-w-[600px]">
+            <div className="relative w-auto my-6 mx-3  max-w-[600px]">
               {/*content*/}
               <div className="border-0 rounded-2xl shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                {/* ========================================================== */}
                 {/*header*/}
+                {/* ========================================================== */}
                 <div className="flex items-start bg-zinc-100 justify-between pt-[15px] pb-[10px] px-5 border-b border-solid border-slate-200 rounded-t-2xl font-dasfont">
                   <h3 className="text-[20px] font-semibold items-center">
                     Đăng nhập tài khoản DA CLOUD
                   </h3>
-                  <XMarkIcon
+                  {/* <XMarkIcon
                     className="w-[30px] h-[30px] text-black-500"
                     onClick={() => setShowModal(false)}
-                  />
-                </div>
-                {/*body*/}
-                <div className="relative p-6 flex-auto">
-                  <div class="relative flex w-full flex-wrap items-stretch mb-3">
-                    <input
-                      type="text"
-                      placeholder="Nhập địa chỉ truy cập"
-                      class="px-3 py-3 placeholder-slate-500 text-black-600 relative text-sm border-solid border focus:shadow-none outline-none focus:outline-none w-full pr-10"
+                  /> */}
+                  <svg
+                    className="w-[30px] h-[30px] text-black-500"
+                    onClick={() => setShowModal(false)}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M6 18L18 6M6 6l12 12"
                     />
-                    <span class="z-10 h-full leading-snug font-semibold absolute bg-slate-100 text-center text-black-300  bg-transparent text-sm items-center justify-center right-0 px-3 py-3">
-                      .dacloud.vn
-                    </span>
-                  </div>
-                  <span className="text-[14px]">Bạn chưa có tài khoản đăng nhập.? <span className="text-green-600 mx-1 font-medium"> Dùng thử miễn phí</span> ngay</span>
+                  </svg>
                 </div>
+                {/* ========================================================== */}
+                {/*body*/}
+                {/* ========================================================== */}
+                <div className="relative p-6 flex-auto">
+                  <div className="grid grid-cols-6 gap-4">
+                    <div class="relative z-0 mb-5 w-full group col-span-4">
+                      <input
+                        type="text"
+                        name="floating_sdt"
+                        id="floating_sdt"
+                        autoComplete="off"
+                        class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-green-500 focus:outline-none focus:ring-0 focus:border-green-500 peer"
+                        placeholder=" "
+                      />
+                      <label
+                        for="floating_sdt"
+                        class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-500 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-green-500 peer-focus:dark:text-green-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+                      >
+                        Địa chỉ truy cập phòng khám
+                      </label>
+                    </div>
+                    <div class="relative z-0 mb-5 w-full group col-span-2">
+                      <button
+                        type="button"
+                        class="block text-[8px] h-full w-full font-semibold text-center text-green-600 bg-green-100 rounded-full  focus:outline-none "
+                      >
+                        .dacloud.vn
+                      </button>
+                    </div>
+                  </div>
+                  {showError ? (
+                    <div className="text-white px-3 py-2 border-0 rounded relative mb-4 bg-red-100">
+                      <span className="text-[13px] inline-block mr-5 align-middle text-red-500">
+                        {/* <ExclamationTriangleIcon  className="h-4 w-4"/> */}
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+                      </span>
+                      <span className="inline-block align-middle mr-8 text-[13px] text-black font-medium">
+                        Vui lòng nhập địa chỉ truy cập
+                      </span>
+                    </div>
+                  ) : null}
+                  <span className="text-[14px]">
+                    Bạn chưa có thông tin tài khoản trên DaCloud.?
+                    <span className="text-green-600 mx-1 font-medium">
+                      Dùng thử miễn phí
+                    </span>
+                  </span>
+                </div>
+                {/* ========================================================== */}
                 {/*footer*/}
                 <div className="flex items-center justify-end p-3 rounded-b">
                   {/* <button
@@ -54,10 +110,10 @@ export default function Modal() {
                   <button
                     className="bg-green-500 flex opacity-100 text-white active:bg-green-600 font-semibold text-sm px-6 py-3 rounded-full outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
-                    onClick={() => setShowModal(false)}
+                    onClick={() => setshowError(true)}
                   >
-                    Đăng nhập quản trị{" "}
-                    <ArrowRightIcon className="w-[20px] h-[20px] ml-2"></ArrowRightIcon>
+                    Đăng nhập quản trị
+                    {/* <ArrowRightIcon className="w-[20px] h-[20px] ml-2"></ArrowRightIcon> */}
                   </button>
                 </div>
               </div>

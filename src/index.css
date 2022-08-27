@@ -9,7 +9,8 @@
   width: 178px;
 }
 .text-active-click{
-  color: #16be65;
+  --tw-bg-opacity: 1;
+  color: rgb(14 159 110 / var(--tw-bg-opacity));
 }
 
 .bg-das-color {
@@ -82,9 +83,10 @@
   bottom: 80px;
   right: 40px;
   width: 45px;
-  background: #22c55e;
+  --tw-bg-opacity: 1;
+  background-color: rgb(14 159 110 / var(--tw-bg-opacity));
   color: white;
-  padding: 5px;
+  padding: 8px;
   cursor: pointer;
   border-radius: 100%;
   border: none;
@@ -94,7 +96,8 @@
 }
 
 .back-to-top:hover {
-  background: #1aa74e;
+  --tw-bg-opacity: 1;
+  background-color: rgb(14 159 110 / var(--tw-bg-opacity));
 }
 
 ::-webkit-scrollbar {
@@ -109,17 +112,19 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #22c55e;
-  border: 3px solid #22c55e;
+  --tw-bg-opacity: 1;
+  background-color: rgb(14 159 110 / var(--tw-bg-opacity));
+  border: 3px solid rgb(14 159 110 / var(--tw-bg-opacity));
   cursor: pointer;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #22c55e;
+  --tw-bg-opacity: 1;
+  background-color: rgb(14 159 110 / var(--tw-bg-opacity));
   cursor: pointer;
 }
 .scrolldown {
-	width: 2.5px; height: 60px; border-radius: 50px; margin: 0 auto; overflow: hidden; background: linear-gradient(to bottom, #22c55e 50%, rgba(255, 255, 255, 0) 50%); background-position: 0 -60px; background-size: 100% 200%; animation: scrolldown 2.2s cubic-bezier(0.76, 0, 0.3, 1) forwards infinite;
+	width: 2.5px; height: 60px; border-radius: 50px; margin: 0 auto; overflow: hidden; background: linear-gradient(to bottom, #0e9f6e 50%, rgba(255, 255, 255, 0) 50%); background-position: 0 -60px; background-size: 100% 200%; animation: scrolldown 2.2s cubic-bezier(0.76, 0, 0.3, 1) forwards infinite;
 	}
 @keyframes scrolldown {
   0% { background-position: 0 -60px; }
@@ -150,7 +155,8 @@
   left: 50%;
   width: 15px;
   height: 15px;
-  background-color: #159945;
+  --tw-bg-opacity: 1;
+  background-color: rgb(14 159 110 / var(--tw-bg-opacity));
   border-radius: 100%;
   transform: translate(-50%, -50%);
   z-index: 999;
