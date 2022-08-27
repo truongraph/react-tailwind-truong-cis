@@ -1,6 +1,6 @@
 import { stats } from "../constants";
 import styles from "../style";
-import { easy, business, database,infosvg } from "../assets";
+import { easy, business, database } from "../assets";
 import {
   ArrowDownCircleIcon,
   ArrowLongDownIcon,
@@ -72,7 +72,7 @@ const Stats = ({
               <img layout="responsive"
                 quality={100}
                 height={414}
-                width={508} src={infosvg} />
+                width={508} src="src/assets/info.svg" />
             </div>
           </div>
           <div className="flex flex-col justify-center ml-auto w-full lg:w-12/12">

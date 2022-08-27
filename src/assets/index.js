@@ -7,7 +7,6 @@ import easy from "./easy.png";
 import business  from "./business.png";
 import database from "./database.png";
 import bannersvg from "./banner.svg";
-import infosvg from "./info.svg";
 export {
   logo,
   banner,
@@ -16,6 +15,5 @@ export {
   easy,
   business,
   database,
-  bannersvg,
-  infosvg
+  bannersvg
 };

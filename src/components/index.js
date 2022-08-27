@@ -8,7 +8,7 @@ import Introduce from "./Introduce";
 import Footer from "./Footer";
 import Testimonials from "./Testimonials";
 import Home from "./Home";
-import ModalRegister from "./ModalRegister";
+import ButtonOutline from "./ButtonOutline";
 import BackTopButton from "./BackTopButton";
 import Cursor from "./Cursor";
 export {
@@ -22,7 +22,7 @@ export {
   Footer,
   Testimonials,
   Home,
-  ModalRegister,
+  ButtonOutline,
   BackTopButton,
   Cursor
 };
