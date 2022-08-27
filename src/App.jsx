@@ -1,5 +1,5 @@
 import {
-  Cursor,
+  UseMouseCursor,
   Feature,
   HeaderMenu,
   Introduce,
@@ -14,7 +14,7 @@ import {
 const App = () => (
   <>
     <section>
-      <Cursor />
+      <UseMouseCursor />
       <HeaderMenu />
       <Home />
       <Introduce />
