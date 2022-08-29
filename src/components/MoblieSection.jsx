@@ -1,4 +1,5 @@
 import { patient, pie, calendar, report, mobliesvg } from "../assets";
+import React from "react";
 const MoblieSection = ({
   listUser = [
     {
@@ -77,13 +78,13 @@ const MoblieSection = ({
       {/* ======================================================================================================== */}
       
       <div className="relative w-full mt8">
-        <div className="absolute rounded-full w-full flex flex-col sm:flex-row justify-between items-center z-10 bg-white-500">
-        <div className="p-12 pt-14 pb-10 w-full text-center bg-green-500 rounded-full font-dasfont">
+        <div className="absolute rounded-2xl w-full flex flex-col sm:flex-row justify-between items-center z-10 bg-white-500">
+        <div className="p-12 pt-14 pb-10 w-full text-center bg-green-500 rounded-2xl font-dasfont">
         <h5 className="mb-2 text-3xl font-extrabold text-white dark:text-white">
           Tải ứng dụng ngay
         </h5>
         <p className="mb-5 text-[14px] text-white dark:text-gray-400">
-          Trải nghiệm ứng dụng DA CLOUD trên Google Play &amp; App Store
+          Trải nghiệm ứng dụng DA CLOUD trên Google Play & App Store
         </p>
         <div className="justify-center items-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
           <a className="w-full sm:w-auto bg-white border hover:bg-green-100 focus:outline-none text-green-500 border-current rounded-full inline-flex items-center justify-center px-8 py-2.5 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700">

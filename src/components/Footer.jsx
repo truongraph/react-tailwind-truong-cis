@@ -1,7 +1,8 @@
 import { logowhite } from "../assets";
+import React from "react";
 const Footer = () => (
   
-  <>
+  <React.Fragment>
   <section className="relative pt-[250px] pb-[50px] mt-[75px] mb-0 bg-gray-800 font-dasfont"  id="lienhe">
     <div className="max-w-screen-xl px-5 xl:px-16 mx-auto font-dasfont">
       <div className="grid grid-cols-1 gap-16 sm:grid-cols-3">
@@ -140,7 +141,7 @@ const Footer = () => (
     </div>
   </section>
   <div className="bg-white p-2 text-center text-[14px] font-medium font-dasfont">Copyright © 2022 <span className="text-green-600 font-bold">DASolution</span> . All rights reserved.</div>
-  </>
+  </React.Fragment>
 );
 
 export default Footer;

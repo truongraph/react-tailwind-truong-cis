@@ -1,19 +1,25 @@
 import { useState, useEffect } from "react";
-import { logo } from "../assets";
+import { logo,englang,vielang } from "../assets";
 import ModalRegister from "./ModalRegister";
 import ModalLogin from "./ModalLogin";
 import { Link as LinkScroll } from "react-scroll";
 import BottomMenuMoblie from "./BottomMenuMoblie";
-
+import ProgressBar from "./ProgressBar";
+import React from "react";
 const HeaderMenu = () => {
+  const completion = ProgressBar();
+ 
   const [scrollActive, setScrollActive] = useState(false);
+
   const [activeLink, setActiveLink] = useState(null);
+  //====================================================
   //Tự động add shadow khi scroll down
   useEffect(() => {
     window.addEventListener("scroll", () => {
       setScrollActive(window.scrollY > 20);
     });
   }, []);
+  //=================================================================================
   return (
     <header
       className={
@@ -21,6 +27,10 @@ const HeaderMenu = () => {
         (scrollActive ? " shadow-md pt-0" : " pt-0  ")
       }
     >
+      <span
+        style={{ transform: `translateX(${completion - 100}%)` }}
+        className="absolute bg-gradient-to-r from-green-400 to-green-500 h-1 w-full bottom-0"
+      />
       {/* ============================================================================ */}
       {/* DAS DESKTOP MENU */}
       {/* ============================================================================ */}
@@ -129,14 +139,17 @@ const HeaderMenu = () => {
           <LinkScroll className="py-1.5 px-0">
             <ModalLogin />
           </LinkScroll>
+          <LinkScroll className="flex">
+             <img src={englang} alt="Logo" className="w-[35px] h-[35px] rounded-lg ml-8 mr-3" />
+             <img src={vielang} alt="Logo" className="w-[35px] h-[35px] rounded-lg" />
+          </LinkScroll>
         </ul>
       </nav>
       {/* ============================================================================ */}
       {/* END DAS DESKTOP MENU */}
       {/* ============================================================================ */}
 
-      <BottomMenuMoblie/>
-      
+      <BottomMenuMoblie />
     </header>
   );
 };

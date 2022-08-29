@@ -1,13 +1,14 @@
 import { easy, business, database, infosvg } from "../assets";
+import React from "react";
 const Stats = ({
   listUser = [
     {
       name: "Thoát khỏi sự khô cứng của một công cụ thông thường, DA Cloud mong muốn mang tới sự thân thiện và yêu thích của nhân sự với công cụ quản trị.",
-      title: "Đơn giản &amp; Dễ sử dụng",
+      title: "Đơn giản & Dễ sử dụng",
       icon: easy,
     },
     {
-      name: "Mỗi Doanh nghiệp sẽ có một thực trạng và cách làm việc khác nhau, vì thế Fastdo sinh ra để mang tới sự linh động &amp; phù hợp cho từng doanh nghiệp Việt Nam",
+      name: "Mỗi Doanh nghiệp sẽ có một thực trạng và cách làm việc khác nhau, vì thế Fastdo sinh ra để mang tới sự linh động & phù hợp cho từng doanh nghiệp Việt Nam",
       title: "Phù hợp từng doanh nghiệp",
       icon: business,
     },

@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import { Link as LinkScroll } from "react-scroll";
+import React from "react";
 const BottomMenuMoblie = () => {
   const [activeLink, setActiveLink] = useState(null);
   return (
-    <>
+    <React.Fragment>
       {/* ============================================================================ */}
       {/* DAS MOBLIE MENU */}
       {/* ============================================================================ */}
@@ -112,16 +113,16 @@ const BottomMenuMoblie = () => {
             {/* ============================================================================ */}
             <LinkScroll
               activeClass="active"
-              to="lienhe"
+              to="ungdung"
               spy={true}
               smooth={true}
               duration={1000}
               onSetActive={() => {
-                setActiveLink("lienhe");
+                setActiveLink("ungdung");
               }}
               className={
                 "py-2 flex flex-col items-center text-xs border-t-2 transition-all cursor-pointer" +
-                (activeLink === "lienhe"
+                (activeLink === "ungdung"
                   ? "  border-green-500 text-white"
                   : " border-transparent ")
               }
@@ -148,7 +149,7 @@ const BottomMenuMoblie = () => {
       {/* ============================================================================ */}
       {/* END DAS MOBLIE MENU  */}
       {/* ============================================================================ */}
-    </>
+    </React.Fragment>
   );
 };
 

@@ -1,6 +1,7 @@
 import PricingBasic from "./PricingBasic";
 import PricingProfessional from "./PricingProfessional";
 import PricingHigh from "./PricingHigh";
+import React from "react";
 const PricingMain = () => {
   return (
     <section className="relative pt-[100px] pb-[100px] mb-0 font-dasfont bg-[#f3f5f6]" id="banggia">

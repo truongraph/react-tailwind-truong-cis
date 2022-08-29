@@ -16,6 +16,8 @@ import BackTopButton from "./BackTopButton";
 import UseMouseCursor from "./UseMouseCursor";
 import GetStarted from "./GetStarted";
 import BottomMenuMoblie from "./BottomMenuMoblie";
+import ProgressBar from "./ProgressBar";
+import ContactButton from "./ContactButton";
 export {
   HeaderMenu,
   UseMousePosition,
@@ -34,5 +36,7 @@ export {
   BackTopButton,
   UseMouseCursor,
   GetStarted,
-  BottomMenuMoblie
+  BottomMenuMoblie,
+  ProgressBar,
+  ContactButton
 };

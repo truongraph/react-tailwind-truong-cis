@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-const Button = ({ styles }) => {
+const Button = () => {
   const [showButton, setShowButton] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -18,7 +18,7 @@ const Button = ({ styles }) => {
     });
   };
   return (
-    <>
+    <React.Fragment>
       {showButton && (
         <svg
           className="back-to-top"
@@ -36,7 +36,7 @@ const Button = ({ styles }) => {
           />
         </svg>
       )}
-    </>
+    </React.Fragment>
   );
 };
 

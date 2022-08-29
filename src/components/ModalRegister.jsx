@@ -1,6 +1,12 @@
 import React from "react";
 import { banner } from "../assets";
+import Select from 'react-select';
 export default function Modal() {
+  const options = [
+    { value: 'chocolate', label: 'Chocolate' },
+    { value: 'strawberry', label: 'Strawberry' },
+    { value: 'vanilla', label: 'Vanilla' }
+  ]
   //Modal chính
   const [showModal, setShowModal] = React.useState(false);
   //Chọn loại kinh doanh
@@ -12,7 +18,7 @@ export default function Modal() {
   //Cá nhân
   const [showChooseS3, setshowChooseS3] = React.useState(false);
   return (
-    <>
+    <React.Fragment>
       <button
         className="font-semibold rounded-full button-das-width bg-white text-green-500 hover:bg-green-100 text-[14px] px-8 border-2 py-1 border-current"
         type="button"
@@ -27,7 +33,7 @@ export default function Modal() {
         Đăng ký
       </button>
       {showModal ? (
-        <>
+        <React.Fragment>
           <div className="font-dasfont justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
             <div className="relative w-auto my-6 mx-auto max-w-6xl">
               {/*content*/}
@@ -250,21 +256,9 @@ export default function Modal() {
                                   Email
                                 </label>
                               </div>
+                              
                               <div className="relative z-0 mb-5 w-full group col-span-4">
-                                <input
-                                  type="text"
-                                  name="floating_email"
-                                  id="floating_email"
-                                  autoComplete="off"
-                                  className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-green-500x` focus:outline-none focus:ring-0 focus:border-green-500 peer"
-                                  placeholder=" "
-                                />
-                                <label
-                                  for="floating_email"
-                                  className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-500 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-green-500 peer-focus:dark:text-green-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-                                >
-                                  Địa chỉ công ty
-                                </label>
+                                <Select options={options} closeMenuOnSelect={true} placeholder={'chọn địa chỉ'} className="z-10" />
                               </div>
                             </div>
                             {/* ========================================================== */}
@@ -880,8 +874,8 @@ export default function Modal() {
             </div>
           </div>
           <div className="opacity-70 fixed inset-0 z-40 bg-black"></div>
-        </>
+        </React.Fragment>
       ) : null}
-    </>
+    </React.Fragment>
   );
 }

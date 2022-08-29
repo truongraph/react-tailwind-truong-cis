@@ -3,6 +3,7 @@
 //   ArrowLongDownIcon,
 // } from "@Heroicons/react/24/outline";
 import { bannersvg } from "../assets";
+import React from "react";
 const Home = () => {
   const scrollDown = () => {
     window.scrollTo({

@@ -18,6 +18,9 @@ import pie from "./pie-chart.png";
 import calendar from "./calendar.png";
 import report from "./report.png";
 import logowhite from "./logowhite.png";
+import logoload from "./logoload.png";
+import vielang from "./vie.png";
+import englang from "./eng.png";
 export {
   logo,
   banner,
@@ -37,5 +40,8 @@ export {
   pie,
   calendar,
   report,
-  logowhite
+  logowhite,
+  logoload,
+  vielang,
+  englang
 };

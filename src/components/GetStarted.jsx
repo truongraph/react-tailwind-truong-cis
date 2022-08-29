@@ -1,6 +1,6 @@
 import styles from "../style";
 // import { arrowUp } from "../assets";
-
+import React from "react";
 const GetStarted = () => (
   <section className="relative py-10 bg-gradient-to-r from-green-500 to-green-700">
     <div className="max-w-screen-xl px-5 py-10 xl:px-16 mx-auto font-dasfont">
