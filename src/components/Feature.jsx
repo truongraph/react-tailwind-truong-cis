@@ -1,4 +1,3 @@
-import { stats } from "../constants";
 import styles from "../style";
 import React from "react";
 import { wellcomesvg ,medicalsvg,stocksvg,filesvg,charsvg,dashboardsvg} from "../assets";
