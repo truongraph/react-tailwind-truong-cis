@@ -6,8 +6,15 @@ import { Link as LinkScroll } from "react-scroll";
 import BottomMenuMoblie from "./BottomMenuMoblie";
 import ProgressBar from "./ProgressBar";
 import React from "react";
+import { useTranslation } from "react-i18next";
 const HeaderMenu = () => {
   const completion = ProgressBar();
+
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (event) => {
+    i18n.changeLanguage(event.target.value);
+  };
  
   const [scrollActive, setScrollActive] = useState(false);
 
@@ -55,7 +62,7 @@ const HeaderMenu = () => {
                 : " text-black-500 hover:text-green-500 a")
             }
           >
-            Trang chủ
+            {t('home')}
           </LinkScroll>
           {/* ============================================================================ */}
           <LinkScroll
@@ -74,7 +81,7 @@ const HeaderMenu = () => {
                 : " text-black-500 hover:text-green-500 a ")
             }
           >
-            Giới thiệu
+            {t('introduce')}
           </LinkScroll>
           {/* ============================================================================ */}
           <LinkScroll
@@ -93,7 +100,7 @@ const HeaderMenu = () => {
                 : " text-black-500 hover:text-green-500 a ")
             }
           >
-            Tính năng
+            {t('feature')}
           </LinkScroll>
           {/* ============================================================================ */}
           <LinkScroll
@@ -112,7 +119,7 @@ const HeaderMenu = () => {
                 : " text-black-500 hover:text-green-500 a ")
             }
           >
-            Bảng phí
+            {t('feetable')}
           </LinkScroll>
           {/* ============================================================================ */}
           <LinkScroll
@@ -131,17 +138,17 @@ const HeaderMenu = () => {
                 : " text-black-500 hover:text-green-500 a ")
             }
           >
-            Ứng dụng
+            {t('application')}
           </LinkScroll>
           <LinkScroll className="py-1.5 pl-7 pr-2">
-            <ModalRegister>Đăng ký</ModalRegister>
+            <ModalRegister>{t('register')}</ModalRegister>
           </LinkScroll>
           <LinkScroll className="py-1.5 px-0">
             <ModalLogin />
           </LinkScroll>
-          <LinkScroll className="flex">
-             <img src={englang} alt="Logo" className="w-[35px] h-[35px] rounded-lg ml-8 mr-3" />
-             <img src={vielang} alt="Logo" className="w-[35px] h-[35px] rounded-lg" />
+          <LinkScroll className="flex" onChange={changeLanguage}>
+             <button onClick={() => i18n.changeLanguage('en')}><img src={englang} alt="Logo" className="w-[35px] h-[35px] rounded-lg ml-8 mr-4" /></button>
+             <button onClick={() => i18n.changeLanguage('vi')}><img src={vielang} alt="Logo" className="w-[35px] h-[35px] rounded-lg" /></button>
           </LinkScroll>
         </ul>
       </nav>

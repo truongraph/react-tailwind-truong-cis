@@ -6,7 +6,8 @@
     "application": "Ứng dụng",
     "register": "Đăng ký",
     "login":"Đăng nhập",
-    "titlehome":"Phần mềm quản lý phòng khám chuyên nghiệp nhất.",
+    "titlehome":"Phần mềm quản lý phòng khám ",
+    "titlehome_1":"chuyên nghiệp nhất.",
     "secontitlehome":"Giải pháp quản lý phòng khám 4.0 .Giúp các chủ phòng khám dễ dàng cập nhật thông tin đơn giản, nhanh chóng & hiệu quả",
     "freetrial":"Dùng thử miễn phí"
 }

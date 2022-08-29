@@ -1,6 +1,11 @@
 import React from "react";
-
+import { useTranslation } from "react-i18next";
 export default function Modal() {
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (event) => {
+    i18n.changeLanguage(event.target.value);
+  };
   const [showModal, setShowModal] = React.useState(false);
   const [showError, setshowError] = React.useState(false);
   return (
@@ -13,7 +18,7 @@ export default function Modal() {
           setshowError(false);
         }}
       >
-        Đăng nhập
+        {t('login')}
       </button>
       {showModal ? (
         <>

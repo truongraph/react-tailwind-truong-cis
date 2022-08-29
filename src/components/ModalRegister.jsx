@@ -1,7 +1,13 @@
 import React from "react";
 import { banner } from "../assets";
 import Select from 'react-select';
+import { useTranslation } from "react-i18next";
 export default function Modal() {
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (event) => {
+    i18n.changeLanguage(event.target.value);
+  };
   const options = [
     { value: 'chocolate', label: 'Chocolate' },
     { value: 'strawberry', label: 'Strawberry' },
@@ -30,7 +36,7 @@ export default function Modal() {
           setshowChooseS3(false);
         }}
       >
-        Đăng ký
+        {t('register')}
       </button>
       {showModal ? (
         <React.Fragment>

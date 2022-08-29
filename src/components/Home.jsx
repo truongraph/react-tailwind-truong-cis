@@ -4,7 +4,13 @@
 // } from "@Heroicons/react/24/outline";
 import { bannersvg } from "../assets";
 import React from "react";
+import { useTranslation } from "react-i18next";
 const Home = () => {
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (event) => {
+    i18n.changeLanguage(event.target.value);
+  };
   const scrollDown = () => {
     window.scrollTo({
       top: 700,
@@ -19,19 +25,18 @@ const Home = () => {
         <div className="grid grid-flow-row sm:grid-flow-col grid-rows-2 md:grid-rows-1 sm:grid-cols-2 gap-8 pt-6 pb-3 sm:py-16 ">
           <div className=" flex flex-col justify-center items-start row-start-2 sm:row-start-1">
             <p className="text-2xl lg:text-3xl xl:text-4xl font-medium text-black-600 leading-normal">
-              Phần mềm quản lý phòng khám <br />
-              <strong>chuyên nghiệp nhất</strong>.
+            {t('titlehome')} <br />
+              <strong>{t('titlehome_1')}</strong>.
             </p>
             <p className="text-black-500 mt-4 mb-6">
-              Giải pháp quản lý phòng khám 4.0 .Giúp các chủ phòng khám dễ dàng
-              cập nhật thông tin đơn giản, nhanh chóng &amp; hiệu quả
+              {t('secontitlehome')}
             </p>
             <button
               className={
                 "py-3  lg:py-4 px-12 lg:px-16 text-white-500 font-semibold rounded-full bg-green-500 hover:shadow-orange-md transition-all outline-none text-white"
               }
             >
-              Dùng thử miễn phí
+              {t('freetrial')}
             </button>
           </div>
           <div className="flex w-full">
