@@ -20,7 +20,7 @@ const Home = () => {
     });
   };
   return (
-    <section className="relative pt-[100px]" id="trangchu">
+    <section className="relative pt-[75px] lg:pt-[100px]" id="trangchu">
       <div className="max-w-screen-xl px-5 xl:px-16 mx-auto font-dasfont">
         <div className="grid grid-flow-row sm:grid-flow-col grid-rows-2 md:grid-rows-1 sm:grid-cols-2 gap-8 pt-6 pb-3 sm:py-16 ">
           <div className=" flex flex-col justify-center items-start row-start-2 sm:row-start-1">

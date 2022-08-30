@@ -10,6 +10,7 @@ import {
   MoblieSection,
   Footer,
   ContactButton,
+  SidebarMenu,
 } from "./components";
 import { logoload } from "./assets";
 import React, { useState, useEffect } from "react";
@@ -19,7 +20,7 @@ const App = () => {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    }, 2500);
+    }, 1000);
   }, []);
   return (
     <React.Fragment>
@@ -36,6 +37,7 @@ const App = () => {
         </div>
       ) : (
         <React.Fragment>
+          <SidebarMenu />
           <HeaderMenu />
           <Home />
           <Introduce />

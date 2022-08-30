@@ -18,6 +18,8 @@ import GetStarted from "./GetStarted";
 import BottomMenuMoblie from "./BottomMenuMoblie";
 import ProgressBar from "./ProgressBar";
 import ContactButton from "./ContactButton";
+import SidebarMenu from "./SidebarMenu";
+import Contact from "./Contact";
 export {
   HeaderMenu,
   UseMousePosition,
@@ -38,5 +40,7 @@ export {
   GetStarted,
   BottomMenuMoblie,
   ProgressBar,
-  ContactButton
+  ContactButton,
+  SidebarMenu,
+  Contact
 };

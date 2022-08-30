@@ -6,7 +6,9 @@ import { Link as LinkScroll } from "react-scroll";
 import BottomMenuMoblie from "./BottomMenuMoblie";
 import ProgressBar from "./ProgressBar";
 import React from "react";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import App from "../App";
 const HeaderMenu = () => {
   const completion = ProgressBar();
 
@@ -43,7 +45,7 @@ const HeaderMenu = () => {
       {/* ============================================================================ */}
       <nav className="max-w-screen-xl px-6 sm:px-8 lg:px-16 mx-auto grid grid-flow-col py-2 sm:py-4 bg-white">
         <div className="flex items-center">
-          <img src={logo} alt="Logo" className="w-56 block m-auto" />
+          <img src={logo} alt="Logo" className="w-56 lg:flex" />
         </div>
         <ul className="font-dasfont hidden lg:flex justify-end text-black-500 col-start-8 col-end-10  items-center">
           <LinkScroll
@@ -65,24 +67,9 @@ const HeaderMenu = () => {
             {t('home')}
           </LinkScroll>
           {/* ============================================================================ */}
-          <LinkScroll
-            activeClass="active"
-            to="gioithieu"
-            spy={true}
-            smooth={true}
-            duration={1000}
-            onSetActive={() => {
-              setActiveLink("gioithieu");
-            }}
-            className={
-              "py-1.5 px-5 font-dasfont font-semibold cursor-pointer text-[14px] animation-hover hover:rounded-full hover:bg-green-100 mr-1.5" +
-              (activeLink === "gioithieu"
-                ? " text-active-click bg-green-100 rounded-full animation-active "
-                : " text-black-500 hover:text-green-500 a ")
-            }
-          >
-            {t('introduce')}
-          </LinkScroll>
+          <Link to="/introduce" className={
+              "py-1.5 px-5 font-dasfont font-semibold cursor-pointer text-[14px] animation-hover hover:rounded-full hover:bg-green-100 mr-1.5 text-black-500 hover:text-green-500 a"
+            }>{t('introduce')}</Link>
           {/* ============================================================================ */}
           <LinkScroll
             activeClass="active"
@@ -122,6 +109,7 @@ const HeaderMenu = () => {
             {t('feetable')}
           </LinkScroll>
           {/* ============================================================================ */}
+          
           <LinkScroll
             activeClass="active"
             to="ungdung"
@@ -138,8 +126,14 @@ const HeaderMenu = () => {
                 : " text-black-500 hover:text-green-500 a ")
             }
           >
-            {t('application')}
+          <Link to="/"> {t('application')} </Link>
           </LinkScroll>
+          
+          {/* ============================================================================ */}
+         
+          <Link to="/contact" className={
+              "py-1.5 px-5 font-dasfont font-semibold cursor-pointer text-[14px] animation-hover hover:rounded-full hover:bg-green-100 mr-1.5 text-black-500 hover:text-green-500 a"
+            }>{t('contact')}</Link>
           <LinkScroll className="py-1.5 pl-7 pr-2">
             <ModalRegister>{t('register')}</ModalRegister>
           </LinkScroll>
@@ -147,8 +141,8 @@ const HeaderMenu = () => {
             <ModalLogin />
           </LinkScroll>
           <LinkScroll className="flex" onChange={changeLanguage}>
-             <button onClick={() => i18n.changeLanguage('en')}><img src={englang} alt="Logo" className="w-[35px] h-[35px] rounded-lg ml-8 mr-4" /></button>
-             <button onClick={() => i18n.changeLanguage('vi')}><img src={vielang} alt="Logo" className="w-[35px] h-[35px] rounded-lg" /></button>
+             <button onClick={() => i18n.changeLanguage('en')}><img src={englang} alt="Logo" className="w-[30px] h-[30px] rounded-lg ml-8 mr-4" /></button>
+             <button onClick={() => i18n.changeLanguage('vi')}><img src={vielang} alt="Logo" className="w-[30px] h-[30px] rounded-lg" /></button>
           </LinkScroll>
         </ul>
       </nav>
