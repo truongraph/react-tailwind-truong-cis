@@ -1,6 +1,6 @@
 # react-tailwind-truong-cis
  
- Download source
+ <p style="color:red">Download source</p>
  
  If you haven't installed NodeJS, please visit this link and install it
  https://nodejs.org/en/
