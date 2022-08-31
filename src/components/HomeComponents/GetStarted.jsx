@@ -1,4 +1,4 @@
-import styles from "../style";
+
 // import { arrowUp } from "../assets";
 import React from "react";
 const GetStarted = () => (

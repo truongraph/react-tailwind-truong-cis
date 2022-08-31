@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
-import { logo,englang,vielang } from "../assets";
-import ModalRegister from "./ModalRegister";
-import ModalLogin from "./ModalLogin";
+import { logo,englang,vielang } from "../../assets";
+import ModalRegister from "../ModalComponents/ModalRegister";
+import ModalLogin from "../ModalComponents/ModalLogin";
 import { Link as LinkScroll } from "react-scroll";
 import BottomMenuMoblie from "./BottomMenuMoblie";
-import ProgressBar from "./ProgressBar";
+import ProgressBar from "../OtherComponents/ProgressBar";
+import SidebarSupport from "./SidebarSupport";
 import React from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import App from "../App";
 const HeaderMenu = () => {
   const completion = ProgressBar();
 
@@ -45,7 +45,8 @@ const HeaderMenu = () => {
       {/* ============================================================================ */}
       <nav className="max-w-screen-xl px-6 sm:px-8 lg:px-16 mx-auto grid grid-flow-col py-2 sm:py-4 bg-white">
         <div className="flex items-center">
-          <img src={logo} alt="Logo" className="w-56 lg:flex" />
+        <Link to="/"> <img src={logo} alt="Logo" className="w-56 lg:flex" /> </Link>
+          
         </div>
         <ul className="font-dasfont hidden lg:flex justify-end text-black-500 col-start-8 col-end-10  items-center">
           <LinkScroll
@@ -64,12 +65,27 @@ const HeaderMenu = () => {
                 : " text-black-500 hover:text-green-500 a")
             }
           >
-            {t('home')}
+            {t('home')} 
           </LinkScroll>
           {/* ============================================================================ */}
-          <Link to="/introduce" className={
-              "py-1.5 px-5 font-dasfont font-semibold cursor-pointer text-[14px] animation-hover hover:rounded-full hover:bg-green-100 mr-1.5 text-black-500 hover:text-green-500 a"
-            }>{t('introduce')}</Link>
+              <LinkScroll
+            activeClass="active"
+            to="gioithieu"
+            spy={true}
+            smooth={true}
+            duration={1000}
+            onSetActive={() => {
+              setActiveLink("gioithieu");
+            }}
+            className={
+              "py-1.5 px-5 font-dasfont font-semibold cursor-pointer text-[14px] animation-hover hover:rounded-full hover:bg-green-100 mr-1.5" +
+              (activeLink === "gioithieu"
+                ? " text-active-click bg-green-100 rounded-full animation-active "
+                : " text-black-500 hover:text-green-500 a ")
+            }
+          >
+            {t('introduce')}
+          </LinkScroll>
           {/* ============================================================================ */}
           <LinkScroll
             activeClass="active"
@@ -126,14 +142,23 @@ const HeaderMenu = () => {
                 : " text-black-500 hover:text-green-500 a ")
             }
           >
-          <Link to="/"> {t('application')} </Link>
+         {t('application')} 
           </LinkScroll>
-          
+          <LinkScroll
+            className={
+              "mr-1.5" +
+              (activeLink === "lienhe"
+                ? " text-active-click bg-green-100 rounded-full animation-active "
+                : " text-black-500 hover:text-green-500 a ")
+            }
+          >
+         <SidebarSupport/>
+          </LinkScroll>
           {/* ============================================================================ */}
          
-          <Link to="/contact" className={
+          {/* <Link to="/contact" className={
               "py-1.5 px-5 font-dasfont font-semibold cursor-pointer text-[14px] animation-hover hover:rounded-full hover:bg-green-100 mr-1.5 text-black-500 hover:text-green-500 a"
-            }>{t('contact')}</Link>
+            }>{t('contact')}</Link> */}
           <LinkScroll className="py-1.5 pl-7 pr-2">
             <ModalRegister>{t('register')}</ModalRegister>
           </LinkScroll>

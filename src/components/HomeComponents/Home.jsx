@@ -2,7 +2,7 @@
 // import {
 //   ArrowLongDownIcon,
 // } from "@Heroicons/react/24/outline";
-import { bannersvg } from "../assets";
+import { bannersvg } from "../../assets";
 import React from "react";
 import { useTranslation } from "react-i18next";
 const Home = () => {

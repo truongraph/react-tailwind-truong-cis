@@ -1,25 +1,25 @@
-import HeaderMenu from "./HeaderMenu";
-import UseMousePosition from "./UseMousePosition";
-import PricingMain from "./PricingMain";
-import PricingBasic from "./PricingBasic";
-import PricingProfessional from "./PricingProfessional";
-import PricingHigh from "./PricingHigh";
-import ModalLogin from "./ModalLogin";
-import MoblieSection from "./MoblieSection";
-import Feature from "./Feature";
-import Introduce from "./Introduce";
-import Footer from "./Footer";
-import Testimonials from "./Testimonials";
-import Home from "./Home";
-import ModalRegister from "./ModalRegister";
-import BackTopButton from "./BackTopButton";
-import UseMouseCursor from "./UseMouseCursor";
-import GetStarted from "./GetStarted";
-import BottomMenuMoblie from "./BottomMenuMoblie";
-import ProgressBar from "./ProgressBar";
-import ContactButton from "./ContactButton";
-import SidebarMenu from "./SidebarMenu";
-import Contact from "./Contact";
+import HeaderMenu from "./MenuComponents/HeaderMenu";
+import UseMousePosition from "./OtherComponents/UseMousePosition";
+import PricingMain from "./PricingComponents/PricingMain";
+import PricingBasic from "./PricingComponents/PricingBasic";
+import PricingProfessional from "./PricingComponents/PricingProfessional";
+import PricingHigh from "./PricingComponents/PricingHigh";
+import ModalLogin from "./ModalComponents/ModalLogin";
+import MoblieSection from "./HomeComponents/MoblieSection";
+import Feature from "./HomeComponents/Feature";
+import Introduce from "./HomeComponents/Introduce";
+import Footer from "./HomeComponents/Footer";
+import SidebarSupport from "./MenuComponents/SidebarSupport";
+import Home from "./HomeComponents/Home";
+import ModalRegister from "./ModalComponents/ModalRegister";
+import BackTopButton from "./OtherComponents/BackTopButton";
+import UseMouseCursor from "./OtherComponents/UseMouseCursor";
+import GetStarted from "./HomeComponents/GetStarted";
+import BottomMenuMoblie from "./MenuComponents/BottomMenuMoblie";
+import ProgressBar from "./OtherComponents/ProgressBar";
+import ContactButton from "./OtherComponents/ContactButton";
+import SidebarMenu from "./MenuComponents/SidebarMenu";
+import Contact from "./Support&Temp/Contact";
 export {
   HeaderMenu,
   UseMousePosition,
@@ -32,7 +32,6 @@ export {
   Feature,
   Introduce,
   Footer,
-  Testimonials,
   Home,
   ModalRegister,
   BackTopButton,
@@ -42,5 +41,6 @@ export {
   ProgressBar,
   ContactButton,
   SidebarMenu,
-  Contact
+  Contact,
+  SidebarSupport
 };

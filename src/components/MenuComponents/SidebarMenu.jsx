@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { logo, englang, vielang } from "../assets";
-import ModalRegister from "./ModalRegister";
-import ModalLogin from "./ModalLogin";
+import { logo, englang, vielang } from "../../assets";
+import ModalRegister from "../ModalComponents/ModalRegister";
+import ModalLogin from "../ModalComponents/ModalLogin";
 import { Link as LinkScroll } from "react-scroll";
 import React from "react";
+import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 const SidebarMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -63,7 +64,7 @@ const SidebarMenu = () => {
         } ease-in-out duration-[400ms]`}
       ></div>
       <div
-        className={`top-0 right-0 p-1 fixed w-[35vh] bg-white h-full z-[999999] font-dasfont
+        className={`top-0 right-0 p-1 fixed w-[80%] bg-white h-full z-[999999] font-dasfont
         ${
           isOpen ? "translate-x-0" : "translate-x-full"
         } ease-in-out duration-300`}
@@ -74,16 +75,8 @@ const SidebarMenu = () => {
         <div className="fixed top-[65px] w-[330px] border-gray-200 left-5 right-5"></div>
         <div className="pt-20 px-6">
           <ul className="font-semibold inline-grid text-black-500 w-full  items-center ">
-            <LinkScroll
-              activeClass="active"
-              to="trangchu"
-              spy={true}
-              smooth={true}
-              duration={1000}
-              onSetActive={() => {
-                setActiveLink("trangchu");
-              }}
-              onClick={() => setIsOpen(!isOpen)}
+            <Link
+              to="/"
               className={
                 "py-2  text-left font-dasfont font-semibold cursor-pointer text-[17px] animation-hover w-full mb-3" +
                 (activeLink === "trangchu"
@@ -92,7 +85,7 @@ const SidebarMenu = () => {
               }
             >
               {t("home")}
-            </LinkScroll>
+            </Link>
             {/* ============================================================================ */}
             <LinkScroll
               activeClass="active"

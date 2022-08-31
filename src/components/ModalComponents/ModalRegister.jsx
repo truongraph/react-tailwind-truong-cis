@@ -1,5 +1,5 @@
 import React from "react";
-import { banner } from "../assets";
+import { banner } from "../../assets";
 import Select from 'react-select';
 import { useTranslation } from "react-i18next";
 export default function Modal() {
