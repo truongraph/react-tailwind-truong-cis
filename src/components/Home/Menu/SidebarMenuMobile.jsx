@@ -1,7 +1,5 @@
 import { useState } from "react";
-import { logo, englang, vielang } from "../../assets";
-import ModalRegister from "../ModalComponents/ModalRegister";
-import ModalLogin from "../ModalComponents/ModalLogin";
+import { logo, englang, vielang } from "../../../assets";
 import { Link as LinkScroll } from "react-scroll";
 import React from "react";
 import { Link } from "react-router-dom";
@@ -73,7 +71,7 @@ const SidebarMenu = () => {
           Menu
         </h2>
         <div className="fixed top-[65px] w-[330px] border-gray-200 left-5 right-5"></div>
-        <div className="pt-20 px-6">
+        <div className="pt-20 px-6 min-h-screen">
           <ul className="font-semibold inline-grid text-black-500 w-full  items-center ">
             <Link
               to="/"
@@ -184,7 +182,7 @@ const SidebarMenu = () => {
             </LinkScroll>
           </ul>
         </div>
-        <div className="bottom-0 mb-[5px] fixed mr-[5px] ml-[2px]">
+        <div className="bottom-0 block mb-[5px] m-4 fixed">
           <button
             className="font-bold mb-1 rounded-lg w-full bg-white border-green-500 border-2 text-green-500 hover:bg-green-100 text-[15px] px-8 py-3 border-current"
             type="button"

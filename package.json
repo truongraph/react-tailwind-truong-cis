@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@headlessui/react": "^1.6.6",
     "flowbite": "^1.5.2",
     "i18next": "^21.9.1",
     "react": "^18.2.0",

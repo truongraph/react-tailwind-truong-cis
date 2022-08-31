@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link as LinkScroll } from "react-scroll";
 import React from "react";
-const BottomMenuMoblie = () => {
+const MoblieBottomMenu = () => {
   const [activeLink, setActiveLink] = useState(null);
   return (
     <React.Fragment>
@@ -108,4 +108,4 @@ const BottomMenuMoblie = () => {
   );
 };
 
-export default BottomMenuMoblie;
+export default MoblieBottomMenu;

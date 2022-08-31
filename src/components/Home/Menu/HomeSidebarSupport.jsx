@@ -29,10 +29,10 @@ export default function Modal() {
       )}
       <>
         <div
-           className={`top-0 right-0 p-1 fixed w-[40vh] shadow-2xl h-full z-[999999] 
+           className={`fixed inset-0 bg-gray-900/20 dark:bg-gray-900/100 z-[999999]
            ${
              showModal ? "translate-x-0" : "translate-x-full"
-           } ease-in-out duration-300`}
+           }`}
         ></div>
         <div
           className={`top-0 right-0 fixed w-[40vh] bg-white h-full z-[999999] font-dasfont text-black
@@ -64,12 +64,12 @@ export default function Modal() {
           <div className="pt-20 px-6">
             <ul className="font-semibold inline-grid text-black-500 w-full  items-center text-gray-700">
               <Link
-                to="/contact"
+                to="/faq"
                 className={
                   "py-2  text-left font-dasfont font-semibold cursor-pointer text-[16px] animation-hover w-full mb-3" +
                   (activeLink === "trangchu"
                     ? " text-active-click  rounded-full animation-active "
-                    : " text-black-500 hover:text-green-500 a")
+                    : " text-black-500 hover:text-green-500")
                 }
               >
                 <span>
@@ -96,7 +96,7 @@ export default function Modal() {
                   "py-2  text-left font-dasfont font-semibold cursor-pointer text-[16px] animation-hover w-full mb-3" +
                   (activeLink === "trangchu"
                     ? " text-active-click  rounded-full animation-active "
-                    : " text-black-500 hover:text-green-500 a")
+                    : " text-black-500 hover:text-green-500")
                 }
               >
                 <span>
@@ -123,7 +123,7 @@ export default function Modal() {
                   "py-2  text-left font-dasfont font-semibold cursor-pointer text-[16px] animation-hover w-full mb-3" +
                   (activeLink === "trangchu"
                     ? " text-active-click  rounded-full animation-active "
-                    : " text-black-500 hover:text-green-500 a")
+                    : " text-black-500 hover:text-green-500")
                 }
               >
                 <span>
@@ -150,7 +150,7 @@ export default function Modal() {
                   "py-2  text-left font-dasfont font-semibold cursor-pointer text-[16px] animation-hover w-full mb-3" +
                   (activeLink === "trangchu"
                     ? " text-active-click  rounded-full animation-active "
-                    : " text-black-500 hover:text-green-500 a")
+                    : " text-black-500 hover:text-green-500")
                 }
               >
                 <span>
@@ -177,7 +177,7 @@ export default function Modal() {
                   "py-2  text-left font-dasfont font-semibold cursor-pointer text-[16px] animation-hover w-full mb-3" +
                   (activeLink === "trangchu"
                     ? " text-active-click  rounded-full animation-active "
-                    : " text-black-500 hover:text-green-500 a")
+                    : " text-black-500 hover:text-green-500")
                 }
               >
                 <span>
@@ -200,7 +200,7 @@ export default function Modal() {
               </Link>
             </ul>
           </div>
-          <div className="bg-green-500 fixed w-full bottom-0 text-white p-2 text-center text-[12px] font-medium font-dasfont">Copyright © 2022 <span className="font-bold">DASolution</span> . All rights reserved.</div>
+          {/* <div className="bg-green-500 fixed w-full bottom-0 text-white p-2 text-center text-[12px] font-medium font-dasfont">Copyright © 2022 <span className="font-bold">DASolution</span> . All rights reserved.</div> */}
         </div>
       </>
     </>

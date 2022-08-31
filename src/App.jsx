@@ -15,6 +15,9 @@ import {
 import { logoload } from "./assets";
 import React, { useState, useEffect } from "react";
 const App = () => {
+  useEffect(() => {
+    document.title = "Phần mềm quản lý phòng khám DA CLOUD"
+}, [])
   const [loading, setLoading] = useState(false);
   useEffect(() => {
     setLoading(true);

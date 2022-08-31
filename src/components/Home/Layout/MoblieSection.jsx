@@ -1,4 +1,4 @@
-import { patient, pie, calendar, report, mobliesvg } from "../../assets";
+import { patient, pie, calendar, report, mobliesvg } from "../../../assets";
 import React from "react";
 const MoblieSection = ({
   listUser = [

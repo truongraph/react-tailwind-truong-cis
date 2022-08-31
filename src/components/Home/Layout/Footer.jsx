@@ -1,4 +1,4 @@
-import { logowhite } from "../../assets";
+import { logowhite } from "../../../assets";
 import React from "react";
 const Footer = () => (
   

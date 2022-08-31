@@ -21,6 +21,7 @@ import logowhite from "./logowhite.png";
 import logoload from "./logoload.png";
 import vielang from "./vie.png";
 import englang from "./eng.png";
+import notfound from "./notfound.svg"
 export {
   logo,
   banner,
@@ -43,5 +44,6 @@ export {
   logowhite,
   logoload,
   vielang,
-  englang
+  englang,
+  notfound
 };

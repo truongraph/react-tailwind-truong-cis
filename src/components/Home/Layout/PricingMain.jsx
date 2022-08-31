@@ -1,6 +1,7 @@
-import PricingBasic from "./PricingBasic";
-import PricingProfessional from "./PricingProfessional";
-import PricingHigh from "./PricingHigh";
+
+import PricingBasic from "../PricingComponents/PricingBasic";
+import PricingProfessional from "../PricingComponents/PricingProfessional";
+import PricingHigh from "../PricingComponents/PricingHigh";
 import React from "react";
 const PricingMain = () => {
   return (

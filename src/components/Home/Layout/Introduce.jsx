@@ -1,4 +1,4 @@
-import { easy, business, database, infosvg } from "../../assets";
+import { easy, business, database, infosvg } from "../../../assets";
 import React, { useState, useEffect } from "react";
 const Stats = ({
   listUser = [

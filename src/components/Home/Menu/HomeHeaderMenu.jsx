@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import { logo,englang,vielang } from "../../assets";
-import ModalRegister from "../ModalComponents/ModalRegister";
-import ModalLogin from "../ModalComponents/ModalLogin";
+import { logo,englang,vielang } from "../../../assets";
+import ModalRegister from "../../ModalComponents/ModalRegister";
+import ModalLogin from "../../ModalComponents/ModalLogin";
 import { Link as LinkScroll } from "react-scroll";
-import BottomMenuMoblie from "./BottomMenuMoblie";
-import ProgressBar from "../OtherComponents/ProgressBar";
-import SidebarSupport from "./SidebarSupport";
+import BottomMenuMoblie from "./MoblieBottomMenu";
+import ProgressBar from "../../OtherComponents/ProgressBar";
+import SidebarSupport from "./HomeSidebarSupport";
 import React from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
