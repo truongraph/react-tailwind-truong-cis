@@ -155,10 +155,6 @@ const HeaderMenu = () => {
          <SidebarSupport/>
           </LinkScroll>
           {/* ============================================================================ */}
-         
-          {/* <Link to="/contact" className={
-              "py-1.5 px-5 font-dasfont font-semibold cursor-pointer text-[14px] animation-hover hover:rounded-full hover:bg-green-100 mr-1.5 text-black-500 hover:text-green-500 a"
-            }>{t('contact')}</Link> */}
           <LinkScroll className="py-1.5 pl-7 pr-2">
             <ModalRegister>{t('register')}</ModalRegister>
           </LinkScroll>

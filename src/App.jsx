@@ -1,3 +1,4 @@
+import { logoload } from "./assets";
 import {
   UseMouseCursor,
   Feature,
@@ -12,7 +13,6 @@ import {
   ContactButton,
   SidebarMenu,
 } from "./components";
-import { logoload } from "./assets";
 import React, { useState, useEffect } from "react";
 const App = () => {
   useEffect(() => {
